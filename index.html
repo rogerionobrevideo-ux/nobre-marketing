@@ -1355,9 +1355,9 @@
       }
 
       .hero {
-        min-height: 100svh;
+        min-height: 118svh;
         padding-top: 112px;
-        padding-bottom: 52px;
+        padding-bottom: 210px;
       }
 
       h1 {
@@ -1372,12 +1372,13 @@
 
       .hero::before {
         background:
-          linear-gradient(180deg, rgba(5, 5, 5, 0.99) 0%, rgba(5, 5, 5, 0.97) 48%, rgba(5, 5, 5, 0.5) 70%, #050505 94%),
-          radial-gradient(circle at 72% 62%, rgba(229, 9, 20, 0.44), transparent 48%),
-          url("assets/hero-person-notebook-phone.png") center 80% / var(--hero-image-size-mobile) no-repeat,
+          linear-gradient(180deg, rgba(5, 5, 5, 0.99) 0%, rgba(5, 5, 5, 0.96) 48%, rgba(5, 5, 5, 0.28) 72%, #050505 99%),
+          linear-gradient(90deg, rgba(5, 5, 5, 0.82), transparent 44%, rgba(5, 5, 5, 0.2)),
+          radial-gradient(circle at 72% 66%, rgba(229, 9, 20, 0.56), transparent 48%),
+          url("assets/hero-person-notebook-phone.png") 62% 370px / 180% auto no-repeat,
           radial-gradient(ellipse at 30% 24%, rgba(5, 5, 5, 1) 0%, rgba(5, 5, 5, 0.94) 46%, rgba(5, 5, 5, 0.72) 78%, rgba(5, 5, 5, 0.52) 100%),
           linear-gradient(180deg, rgba(5, 5, 5, 0.08), #050505 96%);
-        filter: saturate(1.02) brightness(0.95) contrast(1.08);
+        filter: saturate(1.12) brightness(1.18) contrast(1.1);
       }
 
       .hero-content::before {
@@ -1388,17 +1389,22 @@
 
       .authority {
         display: grid;
-        grid-template-columns: 1fr;
-        gap: 8px;
-        margin-top: 24px;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+        margin-top: 22px;
         width: 100%;
-        max-width: 330px;
+        max-width: 100%;
       }
 
       .authority span {
         grid-template-columns: 28px minmax(0, 1fr);
+        min-height: 56px;
+        padding: 9px;
         border-right: 0;
-        padding-right: 0;
+        border: 1px solid rgba(229, 9, 20, 0.28);
+        border-radius: 8px;
+        background: rgba(5, 5, 5, 0.58);
+        backdrop-filter: blur(8px);
       }
 
       .check {
@@ -1408,11 +1414,29 @@
       }
 
       .benefit-title {
-        font-size: 0.68rem;
+        font-size: 0.64rem;
+        line-height: 1.08;
       }
 
       .benefit-text {
-        font-size: 0.68rem;
+        margin-top: 2px;
+        font-size: 0.62rem;
+        line-height: 1.12;
+      }
+
+      .hero-panel {
+        display: block;
+        width: 100%;
+        margin-top: 22px;
+      }
+
+      .hero-visual-frame {
+        aspect-ratio: 16 / 10;
+        transform: none;
+      }
+
+      .hero-visual-frame img {
+        object-position: center;
       }
     }
 
