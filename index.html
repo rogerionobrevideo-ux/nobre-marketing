@@ -1362,13 +1362,12 @@
 
       h1 {
         max-width: calc(100vw - 44px);
-        font-size: clamp(2.08rem, 10vw, 2.92rem);
-        line-height: 0.98;
+        font-size: clamp(2rem, 9.25vw, 2.62rem);
+        line-height: 0.96;
       }
 
       .hero-content {
         max-width: 100%;
-        order: 2;
       }
 
       .hero::before {
@@ -1382,27 +1381,43 @@
       }
 
       .hero-content::before {
-        inset: -18px -14px -18px -14px;
-        background: linear-gradient(180deg, rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.24) 55%, rgba(0, 0, 0, 0.1));
-        backdrop-filter: blur(2px);
+        inset: -22px -14px -20px -14px;
+        background:
+          linear-gradient(90deg, rgba(0, 0, 0, 0.98) 0%, rgba(0, 0, 0, 0.9) 50%, rgba(0, 0, 0, 0.42) 78%, rgba(0, 0, 0, 0.2) 100%),
+          linear-gradient(180deg, rgba(0, 0, 0, 0.38), rgba(0, 0, 0, 0.08) 46%, rgba(0, 0, 0, 0.54) 100%);
+        backdrop-filter: blur(1px);
       }
 
       .hero-content::after {
-        display: none;
+        content: "";
+        position: absolute;
+        top: -34px;
+        right: -56px;
+        width: min(100vw, 430px);
+        height: 430px;
+        z-index: -2;
+        background:
+          radial-gradient(circle at 76% 34%, rgba(229, 9, 20, 0.54), rgba(229, 9, 20, 0.14) 34%, transparent 68%),
+          url("assets/hero-person-notebook-phone.png") right top / 118% auto no-repeat;
+        opacity: 0.92;
+        filter: saturate(1.14) brightness(1.18) contrast(1.12);
+        pointer-events: none;
+        -webkit-mask-image:
+          linear-gradient(90deg, transparent 0%, #000 18%, #000 92%, transparent 100%),
+          linear-gradient(180deg, #000 0%, #000 70%, transparent 100%);
+        -webkit-mask-composite: source-in;
+        mask-image:
+          linear-gradient(90deg, transparent 0%, #000 18%, #000 92%, transparent 100%),
+          linear-gradient(180deg, #000 0%, #000 70%, transparent 100%);
+        mask-composite: intersect;
       }
 
       .hero-grid {
-        display: flex;
-        flex-direction: column;
-        gap: 18px;
+        display: block;
       }
 
       .hero-panel {
-        order: 1;
-        display: block;
-        width: 100%;
-        margin: 0 auto -4px;
-        filter: drop-shadow(0 24px 56px rgba(229, 9, 20, 0.22));
+        display: none;
       }
 
       .hero-panel::before {
