@@ -1710,12 +1710,12 @@
                 <button class="text-link js-format-link" data-filter="Mascote 3D Pixar">Ver exemplos <span>&rarr;</span></button>
               </div>
             </article>
-            <article class="glass-card format-card reveal">
+            <article class="glass-card format-card reveal" data-format="3D Premium / POV" data-name="3D Premium / POV" data-segment="Cinem&aacute;tico" data-video="https://player.vimeo.com/video/1204501179">
               <div class="format-media" style="--format-bg: linear-gradient(180deg, rgba(0,0,0,0), rgba(0,0,0,0.72)), url('assets/formato-3d-pov.png');"><strong>Cinem&aacute;tico</strong></div>
               <div class="format-body">
                 <h3>3D Premium / POV</h3>
                 <p>V&iacute;deos cinematogr&aacute;ficos e realistas.</p>
-                <button class="text-link js-format-link" data-filter="3D Premium / POV">Ver exemplos <span>&rarr;</span></button>
+                <button class="text-link js-watch">Assistir v&iacute;deo <span>&rarr;</span></button>
               </div>
             </article>
             <article class="glass-card format-card reveal">
@@ -1825,7 +1825,7 @@
                 <button class="watch-btn js-watch">Assistir v&iacute;deo</button>
               </div>
             </article>
-            <article class="glass-card portfolio-card reveal" data-format="3D Premium / POV" data-name="3D Premium" data-segment="Personagens 3D" data-video="" style="--thumb-bg: url('assets/capas-videos/3d-premium.png') center / cover;">
+            <article class="glass-card portfolio-card reveal" data-format="3D Premium / POV" data-name="3D Premium" data-segment="Personagens 3D" data-video="https://player.vimeo.com/video/1204501179" style="--thumb-bg: url('assets/capas-videos/3d-premium.png') center / cover;">
               <div class="reel-thumb"><span class="play-chip" aria-hidden="true"></span></div>
               <div class="portfolio-info">
                 <div class="project-name">3D Premium</div>
@@ -2046,7 +2046,7 @@
     }
 
     watchButtons.forEach((button) => {
-      button.addEventListener("click", () => openModal(button.closest(".portfolio-card")));
+      button.addEventListener("click", () => openModal(button.closest(".portfolio-card, .format-card")));
     });
 
     modalClose.addEventListener("click", closeModal);
