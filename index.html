@@ -1241,7 +1241,9 @@
     }
 
     .modal-dialog {
+      position: relative;
       width: min(100%, 460px);
+      max-height: calc(100vh - 28px);
       border: 1px solid rgba(255, 255, 255, 0.18);
       border-radius: var(--radius);
       background: #0b0b0d;
@@ -1286,8 +1288,8 @@
 
     .video-frame {
       aspect-ratio: 9 / 16;
-      width: min(100%, 360px);
-      margin: 18px auto;
+      width: min(100%, 340px);
+      margin: 14px auto;
       border: 1px solid rgba(255, 255, 255, 0.14);
       border-radius: var(--radius);
       overflow: hidden;
@@ -1317,11 +1319,17 @@
       line-height: 1.5;
     }
     .video-carousel {
+      position: absolute;
+      left: 12px;
+      right: 12px;
+      top: 54%;
+      z-index: 5;
       display: none;
       align-items: center;
       justify-content: space-between;
       gap: 12px;
-      padding: 0 18px 18px;
+      pointer-events: none;
+      transform: translateY(-50%);
     }
 
     .video-carousel.is-visible {
@@ -1330,34 +1338,44 @@
 
     .video-nav {
       flex: 0 0 auto;
-      width: 42px;
-      height: 42px;
+      width: 52px;
+      height: 52px;
       display: grid;
       place-items: center;
+      border: 1px solid rgba(255, 255, 255, 0.36);
       border-radius: 50%;
-      background: rgba(255, 255, 255, 0.1);
-      font-size: 1.45rem;
+      background: rgba(229, 9, 20, 0.94);
+      box-shadow: 0 14px 34px rgba(229, 9, 20, 0.42);
+      color: #ffffff;
+      font-size: 2.2rem;
       line-height: 1;
+      pointer-events: auto;
     }
 
     .video-nav:hover {
-      background: var(--red);
+      background: #ff1b2a;
     }
 
     .video-nav:disabled {
-      opacity: 0.4;
+      opacity: 0.35;
       cursor: not-allowed;
     }
 
     .video-carousel-text {
       min-width: 0;
-      color: rgba(255, 255, 255, 0.78);
+      max-width: 190px;
+      padding: 9px 12px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: 999px;
+      background: rgba(0, 0, 0, 0.72);
+      color: rgba(255, 255, 255, 0.92);
       font-family: var(--font-strong);
-      font-size: 0.82rem;
+      font-size: 0.74rem;
       font-weight: 900;
       text-align: center;
       text-transform: uppercase;
-      line-height: 1.35;
+      line-height: 1.25;
+      pointer-events: none;
     }
 
     @media (min-width: 560px) {
@@ -2016,7 +2034,7 @@
       <div class="video-frame" id="videoFrame"></div>
       <div class="video-carousel" id="videoCarousel" aria-live="polite">
         <button class="video-nav" id="videoPrev" aria-label="V&iacute;deo anterior">&lsaquo;</button>
-        <div class="video-carousel-text" id="videoCarouselText">Passe para o lado</div>
+        <div class="video-carousel-text" id="videoCarouselText">Use as setas para passar</div>
         <button class="video-nav" id="videoNext" aria-label="Pr&oacute;ximo v&iacute;deo">&rsaquo;</button>
       </div>
     </div>
@@ -2094,7 +2112,7 @@
       videoPrev.disabled = activeVideoIndex === 0;
       videoNext.disabled = activeVideoIndex >= activeVideos.length - 1;
       videoCarouselText.textContent = hasMultipleVideos
-        ? `Passe para o lado (${activeVideoIndex + 1}/${activeVideos.length})`
+        ? `Use as setas para passar (${activeVideoIndex + 1}/${activeVideos.length})`
         : "";
     }
 
