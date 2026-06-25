@@ -1316,6 +1316,49 @@
       font-weight: 900;
       line-height: 1.5;
     }
+    .video-carousel {
+      display: none;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 0 18px 18px;
+    }
+
+    .video-carousel.is-visible {
+      display: flex;
+    }
+
+    .video-nav {
+      flex: 0 0 auto;
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.1);
+      font-size: 1.45rem;
+      line-height: 1;
+    }
+
+    .video-nav:hover {
+      background: var(--red);
+    }
+
+    .video-nav:disabled {
+      opacity: 0.4;
+      cursor: not-allowed;
+    }
+
+    .video-carousel-text {
+      min-width: 0;
+      color: rgba(255, 255, 255, 0.78);
+      font-family: var(--font-strong);
+      font-size: 0.82rem;
+      font-weight: 900;
+      text-align: center;
+      text-transform: uppercase;
+      line-height: 1.35;
+    }
 
     @media (min-width: 560px) {
       .cta-row {
@@ -1694,23 +1737,23 @@
             <p>Cada formato possui um objetivo diferente: vender, gerar autoridade, apresentar servi&ccedil;os ou atrair novos clientes.</p>
           </div>
           <div class="formats-grid">
-            <article class="glass-card format-card reveal">
+            <article class="glass-card format-card reveal" data-format="Pessoas Reais" data-name="V&iacute;deos com Pessoas Reais" data-segment="UGC real" data-video="https://player.vimeo.com/video/1204587935">
               <div class="format-media" style="--format-bg: linear-gradient(180deg, rgba(0,0,0,0), rgba(0,0,0,0.72)), url('assets/formato-pessoas-reais.png');"><strong>Humanizado</strong></div>
               <div class="format-body">
                 <h3>V&iacute;deos com Pessoas Reais</h3>
                 <p>UGC, influencer, depoimentos e apresentadores.</p>
-                <button class="text-link js-format-link" data-filter="Pessoas Reais">Ver exemplos <span>&rarr;</span></button>
+                <button class="text-link js-watch">Assistir v&iacute;deo <span>&rarr;</span></button>
               </div>
             </article>
-            <article class="glass-card format-card reveal">
+            <article class="glass-card format-card reveal" data-format="Mascote 3D Pixar" data-name="Mascote 3D Pixar" data-segment="Personagem" data-video="https://player.vimeo.com/video/1204588657" data-videos="https://player.vimeo.com/video/1204588657|https://player.vimeo.com/video/1204589243">
               <div class="format-media" style="--format-bg: linear-gradient(180deg, rgba(0,0,0,0), rgba(0,0,0,0.72)), url('assets/formato-mascote-3d.png');"><strong>Personagem</strong></div>
               <div class="format-body">
                 <h3>Mascote 3D Pixar</h3>
                 <p>Personagens 3D personalizados para empresas.</p>
-                <button class="text-link js-format-link" data-filter="Mascote 3D Pixar">Ver exemplos <span>&rarr;</span></button>
+                <button class="text-link js-watch">Assistir v&iacute;deo <span>&rarr;</span></button>
               </div>
             </article>
-            <article class="glass-card format-card reveal" data-format="3D Premium / POV" data-name="3D Premium / POV" data-segment="Cinem&aacute;tico" data-video="https://player.vimeo.com/video/1204501179">
+            <article class="glass-card format-card reveal" data-format="3D Premium / POV" data-name="3D Premium / POV" data-segment="Cinem&aacute;tico" data-video="https://player.vimeo.com/video/1204501179" data-videos="https://player.vimeo.com/video/1204501179|https://player.vimeo.com/video/1204589721">
               <div class="format-media" style="--format-bg: linear-gradient(180deg, rgba(0,0,0,0), rgba(0,0,0,0.72)), url('assets/formato-3d-pov.png');"><strong>Cinem&aacute;tico</strong></div>
               <div class="format-body">
                 <h3>3D Premium / POV</h3>
@@ -1799,7 +1842,7 @@
                 <button class="watch-btn js-watch">Assistir v&iacute;deo</button>
               </div>
             </article>
-            <article class="glass-card portfolio-card reveal" data-format="Pessoas Reais" data-name="UGC Real" data-segment="Influencer real" data-video="" style="--thumb-bg: url('assets/capas-videos/ugc-real.png') center / cover;">
+            <article class="glass-card portfolio-card reveal" data-format="Pessoas Reais" data-name="UGC Real" data-segment="Influencer real" data-video="https://player.vimeo.com/video/1204587935" style="--thumb-bg: url('assets/capas-videos/ugc-real.png') center / cover;">
               <div class="reel-thumb"><span class="play-chip" aria-hidden="true"></span></div>
               <div class="portfolio-info">
                 <div class="project-name">UGC Real</div>
@@ -1817,7 +1860,7 @@
               </div>
             </article>
 
-            <article class="glass-card portfolio-card reveal" data-format="Mascote 3D Pixar" data-name="Mascote 3D" data-segment="Personagem" data-video="" style="--thumb-bg: url('assets/capas-videos/mascote.png') center / cover;">
+            <article class="glass-card portfolio-card reveal" data-format="Mascote 3D Pixar" data-name="Mascote 3D" data-segment="Personagem" data-video="https://player.vimeo.com/video/1204588657" data-videos="https://player.vimeo.com/video/1204588657|https://player.vimeo.com/video/1204589243" style="--thumb-bg: url('assets/capas-videos/mascote.png') center / cover;">
               <div class="reel-thumb"><span class="play-chip" aria-hidden="true"></span></div>
               <div class="portfolio-info">
                 <div class="project-name">Mascote 3D</div>
@@ -1825,7 +1868,7 @@
                 <button class="watch-btn js-watch">Assistir v&iacute;deo</button>
               </div>
             </article>
-            <article class="glass-card portfolio-card reveal" data-format="3D Premium / POV" data-name="3D Premium" data-segment="Personagens 3D" data-video="https://player.vimeo.com/video/1204501179" style="--thumb-bg: url('assets/capas-videos/3d-premium.png') center / cover;">
+            <article class="glass-card portfolio-card reveal" data-format="3D Premium / POV" data-name="3D Premium" data-segment="Personagens 3D" data-video="https://player.vimeo.com/video/1204501179" data-videos="https://player.vimeo.com/video/1204501179|https://player.vimeo.com/video/1204589721" style="--thumb-bg: url('assets/capas-videos/3d-premium.png') center / cover;">
               <div class="reel-thumb"><span class="play-chip" aria-hidden="true"></span></div>
               <div class="portfolio-info">
                 <div class="project-name">3D Premium</div>
@@ -1971,6 +2014,11 @@
         <button class="modal-close" id="modalClose" aria-label="Fechar modal">&times;</button>
       </div>
       <div class="video-frame" id="videoFrame"></div>
+      <div class="video-carousel" id="videoCarousel" aria-live="polite">
+        <button class="video-nav" id="videoPrev" aria-label="V&iacute;deo anterior">&lsaquo;</button>
+        <div class="video-carousel-text" id="videoCarouselText">Passe para o lado</div>
+        <button class="video-nav" id="videoNext" aria-label="Pr&oacute;ximo v&iacute;deo">&rsaquo;</button>
+      </div>
     </div>
   </div>
 
@@ -1984,6 +2032,13 @@
     const modalTitle = document.querySelector("#modalTitle");
     const modalMeta = document.querySelector("#modalMeta");
     const videoFrame = document.querySelector("#videoFrame");
+    const videoCarousel = document.querySelector("#videoCarousel");
+    const videoPrev = document.querySelector("#videoPrev");
+    const videoNext = document.querySelector("#videoNext");
+    const videoCarouselText = document.querySelector("#videoCarouselText");
+    let activeVideos = [];
+    let activeVideoIndex = 0;
+    let activeVideoName = "";
 
     function applyFilter(filter) {
       filterButtons.forEach((button) => {
@@ -2023,15 +2078,37 @@
       return `<iframe src="${videoUrl}" title="${name}" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>`;
     }
 
+    function getCardVideos(card) {
+      if (card.dataset.videos) {
+        return card.dataset.videos.split("|").map((video) => video.trim()).filter(Boolean);
+      }
+
+      return card.dataset.video ? [card.dataset.video] : [];
+    }
+
+    function renderActiveVideo() {
+      const videoUrl = activeVideos[activeVideoIndex] || "";
+      videoFrame.innerHTML = buildVideoContent(videoUrl, activeVideoName);
+      const hasMultipleVideos = activeVideos.length > 1;
+      videoCarousel.classList.toggle("is-visible", hasMultipleVideos);
+      videoPrev.disabled = activeVideoIndex === 0;
+      videoNext.disabled = activeVideoIndex >= activeVideos.length - 1;
+      videoCarouselText.textContent = hasMultipleVideos
+        ? `Passe para o lado (${activeVideoIndex + 1}/${activeVideos.length})`
+        : "";
+    }
+
     function openModal(card) {
       const name = card.dataset.name;
       const format = card.dataset.format;
       const segment = card.dataset.segment;
-      const videoUrl = card.dataset.video;
 
+      activeVideos = getCardVideos(card);
+      activeVideoIndex = 0;
+      activeVideoName = name;
       modalTitle.textContent = name;
       modalMeta.textContent = `${format} &middot; ${segment}`;
-      videoFrame.innerHTML = buildVideoContent(videoUrl, name);
+      renderActiveVideo();
       modal.classList.add("is-open");
       modal.setAttribute("aria-hidden", "false");
       document.body.classList.add("modal-open");
@@ -2043,12 +2120,29 @@
       modal.setAttribute("aria-hidden", "true");
       document.body.classList.remove("modal-open");
       videoFrame.innerHTML = "";
+      activeVideos = [];
+      activeVideoIndex = 0;
+      videoCarousel.classList.remove("is-visible");
     }
 
     watchButtons.forEach((button) => {
       button.addEventListener("click", () => openModal(button.closest(".portfolio-card, .format-card")));
     });
 
+
+    videoPrev.addEventListener("click", () => {
+      if (activeVideoIndex > 0) {
+        activeVideoIndex -= 1;
+        renderActiveVideo();
+      }
+    });
+
+    videoNext.addEventListener("click", () => {
+      if (activeVideoIndex < activeVideos.length - 1) {
+        activeVideoIndex += 1;
+        renderActiveVideo();
+      }
+    });
     modalClose.addEventListener("click", closeModal);
     modal.addEventListener("click", (event) => {
       if (event.target === modal) closeModal();
