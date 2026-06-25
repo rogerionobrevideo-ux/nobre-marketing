@@ -1286,10 +1286,15 @@
       background: var(--red);
     }
 
-    .video-frame {
-      aspect-ratio: 9 / 16;
+    .video-shell {
+      position: relative;
       width: min(100%, 340px);
       margin: 14px auto;
+    }
+
+    .video-frame {
+      aspect-ratio: 9 / 16;
+      width: 100%;
       border: 1px solid rgba(255, 255, 255, 0.14);
       border-radius: var(--radius);
       overflow: hidden;
@@ -1320,14 +1325,14 @@
     }
     .video-carousel {
       position: absolute;
-      left: 12px;
-      right: 12px;
-      top: 54%;
-      z-index: 5;
+      left: 10px;
+      right: 10px;
+      top: 50%;
+      z-index: 20;
       display: none;
       align-items: center;
       justify-content: space-between;
-      gap: 12px;
+      gap: 10px;
       pointer-events: none;
       transform: translateY(-50%);
     }
@@ -1338,17 +1343,23 @@
 
     .video-nav {
       flex: 0 0 auto;
-      width: 52px;
-      height: 52px;
-      display: grid;
-      place-items: center;
-      border: 1px solid rgba(255, 255, 255, 0.36);
-      border-radius: 50%;
-      background: rgba(229, 9, 20, 0.94);
-      box-shadow: 0 14px 34px rgba(229, 9, 20, 0.42);
+      min-width: 92px;
+      height: 46px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      padding: 0 12px;
+      border: 1px solid rgba(255, 255, 255, 0.42);
+      border-radius: 999px;
+      background: rgba(229, 9, 20, 0.96);
+      box-shadow: 0 14px 34px rgba(229, 9, 20, 0.5);
       color: #ffffff;
-      font-size: 2.2rem;
+      font-family: var(--font-strong);
+      font-size: 0.76rem;
+      font-weight: 900;
       line-height: 1;
+      text-transform: uppercase;
       pointer-events: auto;
     }
 
@@ -1362,20 +1373,25 @@
     }
 
     .video-carousel-text {
+      position: absolute;
+      left: 50%;
+      bottom: -42px;
       min-width: 0;
-      max-width: 190px;
-      padding: 9px 12px;
+      max-width: 220px;
+      padding: 8px 12px;
       border: 1px solid rgba(255, 255, 255, 0.18);
       border-radius: 999px;
-      background: rgba(0, 0, 0, 0.72);
-      color: rgba(255, 255, 255, 0.92);
+      background: rgba(0, 0, 0, 0.78);
+      color: rgba(255, 255, 255, 0.95);
       font-family: var(--font-strong);
-      font-size: 0.74rem;
+      font-size: 0.72rem;
       font-weight: 900;
       text-align: center;
       text-transform: uppercase;
       line-height: 1.25;
       pointer-events: none;
+      transform: translateX(-50%);
+      white-space: nowrap;
     }
 
     @media (min-width: 560px) {
@@ -2031,11 +2047,13 @@
         </div>
         <button class="modal-close" id="modalClose" aria-label="Fechar modal">&times;</button>
       </div>
-      <div class="video-frame" id="videoFrame"></div>
-      <div class="video-carousel" id="videoCarousel" aria-live="polite">
-        <button class="video-nav" id="videoPrev" aria-label="V&iacute;deo anterior">&lsaquo;</button>
-        <div class="video-carousel-text" id="videoCarouselText">Use as setas para passar</div>
-        <button class="video-nav" id="videoNext" aria-label="Pr&oacute;ximo v&iacute;deo">&rsaquo;</button>
+      <div class="video-shell">
+        <div class="video-frame" id="videoFrame"></div>
+        <div class="video-carousel" id="videoCarousel" aria-live="polite">
+          <button class="video-nav" id="videoPrev" aria-label="V&iacute;deo anterior">&lsaquo; Anterior</button>
+          <div class="video-carousel-text" id="videoCarouselText">Use as setas para passar</div>
+          <button class="video-nav" id="videoNext" aria-label="Pr&oacute;ximo v&iacute;deo">Pr&oacute;ximo &rsaquo;</button>
+        </div>
       </div>
     </div>
   </div>
@@ -2112,7 +2130,7 @@
       videoPrev.disabled = activeVideoIndex === 0;
       videoNext.disabled = activeVideoIndex >= activeVideos.length - 1;
       videoCarouselText.textContent = hasMultipleVideos
-        ? `Use as setas para passar (${activeVideoIndex + 1}/${activeVideos.length})`
+        ? `Proximo video pela seta (${activeVideoIndex + 1}/${activeVideos.length})`
         : "";
     }
 
@@ -2182,3 +2200,5 @@
   </script>
 </body>
 </html>
+
+
