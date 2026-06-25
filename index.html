@@ -1355,9 +1355,9 @@
       }
 
       .hero {
-        min-height: 118svh;
-        padding-top: 112px;
-        padding-bottom: 92px;
+        min-height: 100svh;
+        padding-top: 94px;
+        padding-bottom: 64px;
       }
 
       h1 {
@@ -1368,6 +1368,7 @@
 
       .hero-content {
         max-width: 100%;
+        order: 2;
       }
 
       .hero::before {
@@ -1390,6 +1391,58 @@
         display: none;
       }
 
+      .hero-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+      }
+
+      .hero-panel {
+        order: 1;
+        display: block;
+        width: 100%;
+        margin: 0 auto -4px;
+        filter: drop-shadow(0 24px 56px rgba(229, 9, 20, 0.22));
+      }
+
+      .hero-panel::before {
+        inset: 8% -10% -12%;
+        background:
+          radial-gradient(circle at 72% 52%, rgba(229, 9, 20, 0.5), rgba(229, 9, 20, 0.16) 36%, transparent 70%),
+          radial-gradient(circle at 34% 84%, rgba(255, 38, 50, 0.18), transparent 48%);
+        filter: blur(16px);
+      }
+
+      .hero-visual-frame {
+        height: clamp(168px, 48vw, 218px);
+        aspect-ratio: auto;
+        overflow: hidden;
+        transform: none;
+      }
+
+      .hero-visual-frame::after {
+        inset: 0;
+        background:
+          linear-gradient(90deg, rgba(5, 5, 5, 0.76) 0%, rgba(5, 5, 5, 0.18) 34%, rgba(5, 5, 5, 0.1) 64%, rgba(5, 5, 5, 0.66) 100%),
+          linear-gradient(180deg, rgba(5, 5, 5, 0.64) 0%, transparent 24%, transparent 62%, rgba(5, 5, 5, 0.88) 100%);
+      }
+
+      .hero-visual-frame img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 64% 42%;
+        filter: brightness(1.16) contrast(1.14) saturate(1.12);
+        -webkit-mask-image:
+          linear-gradient(90deg, transparent 0%, #000 10%, #000 88%, transparent 100%),
+          linear-gradient(180deg, transparent 0%, #000 10%, #000 80%, transparent 100%);
+        -webkit-mask-composite: source-in;
+        mask-image:
+          linear-gradient(90deg, transparent 0%, #000 10%, #000 88%, transparent 100%),
+          linear-gradient(180deg, transparent 0%, #000 10%, #000 80%, transparent 100%);
+        mask-composite: intersect;
+      }
+
       .authority {
         display: grid;
         grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1402,25 +1455,7 @@
       }
 
       .authority::before {
-        content: "";
-        position: absolute;
-        inset: -16px -22px -70px -22px;
-        z-index: -1;
-        background:
-          linear-gradient(180deg, rgba(5, 5, 5, 0.15) 0%, rgba(5, 5, 5, 0.02) 30%, rgba(5, 5, 5, 0.88) 100%),
-          radial-gradient(circle at 74% 48%, rgba(229, 9, 20, 0.5), rgba(229, 9, 20, 0.14) 34%, transparent 70%),
-          url("assets/hero-person-notebook-phone.png") right -20px bottom -24px / 122% auto no-repeat;
-        opacity: 0.9;
-        filter: saturate(1.12) brightness(1.16) contrast(1.1);
-        pointer-events: none;
-        -webkit-mask-image:
-          linear-gradient(90deg, transparent 0%, #000 12%, #000 90%, transparent 100%),
-          linear-gradient(180deg, transparent 0%, #000 13%, #000 74%, transparent 100%);
-        -webkit-mask-composite: source-in;
-        mask-image:
-          linear-gradient(90deg, transparent 0%, #000 12%, #000 90%, transparent 100%),
-          linear-gradient(180deg, transparent 0%, #000 13%, #000 74%, transparent 100%);
-        mask-composite: intersect;
+        content: none;
       }
 
       .authority > span {
@@ -1433,8 +1468,6 @@
         background: linear-gradient(145deg, rgba(12, 12, 15, 0.92), rgba(80, 4, 9, 0.44));
         backdrop-filter: blur(10px);
         box-shadow: 0 12px 26px rgba(0, 0, 0, 0.28);
-        position: relative;
-        z-index: 1;
       }
 
       .check {
@@ -1454,18 +1487,6 @@
         line-height: 1.18;
       }
 
-      .hero-panel {
-        display: none;
-      }
-
-      .hero-visual-frame {
-        aspect-ratio: 16 / 10;
-        transform: none;
-      }
-
-      .hero-visual-frame img {
-        object-position: center;
-      }
     }
 
     @media (min-width: 760px) {
