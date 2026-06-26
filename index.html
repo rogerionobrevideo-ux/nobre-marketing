@@ -1699,7 +1699,7 @@
               <div class="format-body">
                 <h3>Pessoas Reais</h3>
                 <p>UGC, influencer, depoimentos e apresentadores.</p>
-                <button class="text-link js-format-link" data-filter="Pessoas Reais">Ver exemplos <span>&rarr;</span></button>
+                <button class="text-link js-format-link" data-filter="Influencer Real">Ver exemplos <span>&rarr;</span></button>
               </div>
             </article>
             <article class="glass-card format-card reveal">
@@ -1707,7 +1707,7 @@
               <div class="format-body">
                 <h3>Mascote 3D Pixar</h3>
                 <p>Personagens 3D personalizados para empresas.</p>
-                <button class="text-link js-format-link" data-filter="Mascote 3D Pixar">Ver exemplos <span>&rarr;</span></button>
+                <button class="text-link js-format-link" data-filter="Mascote">Ver exemplos <span>&rarr;</span></button>
               </div>
             </article>
             <article class="glass-card format-card reveal">
@@ -1715,7 +1715,7 @@
               <div class="format-body">
                 <h3>3D Premium / POV</h3>
                 <p>V&iacute;deos cinematogr&aacute;ficos e realistas.</p>
-                <button class="text-link js-format-link" data-filter="3D Premium / POV">Ver exemplos <span>&rarr;</span></button>
+                <button class="text-link js-format-link" data-filter="POV">Ver exemplos <span>&rarr;</span></button>
               </div>
             </article>
             <article class="glass-card format-card reveal">
@@ -1739,7 +1739,7 @@
               <div class="format-body">
                 <h3>Criativos para Tr&aacute;fego Pago</h3>
                 <p>V&iacute;deos focados em convers&atilde;o.</p>
-                <button class="text-link js-format-link" data-filter="Tr&aacute;fego Pago">Ver exemplos <span>&rarr;</span></button>
+                <button class="text-link js-format-link" data-filter="Todos">Ver exemplos <span>&rarr;</span></button>
               </div>
             </article>
             <article class="glass-card format-card reveal">
@@ -1747,7 +1747,7 @@
               <div class="format-body">
                 <h3>Institucionais e Storytelling</h3>
                 <p>Empresa, autoridade, marca, hist&oacute;ria, conex&atilde;o e narrativa.</p>
-                <button class="text-link js-format-link" data-filter="Storytelling">Ver exemplos <span>&rarr;</span></button>
+                <button class="text-link js-format-link" data-filter="Todos">Ver exemplos <span>&rarr;</span></button>
               </div>
             </article>
           </div>
@@ -1762,13 +1762,14 @@
           </div>
           <div class="filters reveal" aria-label="Filtros do portfolio">
             <button class="filter-btn is-active" data-filter="Todos">Todos</button>
-            <button class="filter-btn" data-filter="Pessoas Reais">Pessoas Reais</button>
-            <button class="filter-btn" data-filter="Mascote 3D Pixar">Mascote 3D Pixar</button>
-            <button class="filter-btn" data-filter="3D Premium / POV">3D Premium / POV</button>
+            <button class="filter-btn" data-filter="3D Pixar">3D Pixar</button>
+            <button class="filter-btn" data-filter="Mascote">Mascote</button>
+            <button class="filter-btn" data-filter="Influencer Real">Influencer Real</button>
+            <button class="filter-btn" data-filter="Influencer IA">Influencer IA</button>
             <button class="filter-btn" data-filter="Whiteboard">Whiteboard</button>
             <button class="filter-btn" data-filter="VSL">VSL</button>
-            <button class="filter-btn" data-filter="Tr&aacute;fego Pago">Tr&aacute;fego Pago</button>
-            <button class="filter-btn" data-filter="Storytelling">Storytelling</button>
+            <button class="filter-btn" data-filter="POV">POV</button>
+            <button class="filter-btn" data-filter="Lan&ccedil;amentos">Lan&ccedil;amentos</button>
           </div>
           <div class="portfolio-grid" id="portfolioGrid">
             <!--
@@ -1780,27 +1781,35 @@
               data-segment = segmento
               data-video = link do video embed, YouTube, Vimeo ou arquivo MP4
             -->
-            <article class="glass-card portfolio-card reveal" data-format="Pessoas Reais" data-name="Campanha com Apresentadora" data-segment="Servi&ccedil;os" data-video="" style="--thumb-bg: linear-gradient(180deg, rgba(0,0,0,0.05), rgba(0,0,0,0.7)), url('assets/capas-videos/influencer-real.png') center / cover;">
+            <article class="glass-card portfolio-card reveal" data-format="3D Pixar" data-name="Personagem 3D Pixar" data-segment="IA 3D" data-video="" style="--thumb-bg: linear-gradient(180deg, rgba(0,0,0,0.05), rgba(0,0,0,0.7)), url('assets/capas-videos/3d-premium.png') center / cover;">
               <div class="reel-thumb"><span class="play-chip" aria-hidden="true"></span></div>
               <div class="portfolio-info">
-                <div class="project-name">Campanha com Apresentadora</div>
-                <div class="project-meta">Pessoas Reais &middot; Servi&ccedil;os</div>
+                <div class="project-name">Personagem 3D Pixar</div>
+                <div class="project-meta">3D Pixar &middot; IA 3D</div>
                 <button class="watch-btn js-watch">Assistir v&iacute;deo</button>
               </div>
             </article>
-            <article class="glass-card portfolio-card reveal" data-format="Mascote 3D Pixar" data-name="Mascote Comercial 3D" data-segment="Varejo" data-video="" style="--thumb-bg: linear-gradient(180deg, rgba(0,0,0,0.04), rgba(0,0,0,0.72)), url('assets/capas-videos/mascote.png') center / cover;">
+            <article class="glass-card portfolio-card reveal" data-format="Mascote" data-name="Mascote Comercial" data-segment="Personagem de marca" data-video="" style="--thumb-bg: linear-gradient(180deg, rgba(0,0,0,0.04), rgba(0,0,0,0.72)), url('assets/capas-videos/mascote.png') center / cover;">
               <div class="reel-thumb"><span class="play-chip" aria-hidden="true"></span></div>
               <div class="portfolio-info">
-                <div class="project-name">Mascote Comercial 3D</div>
-                <div class="project-meta">Mascote 3D Pixar &middot; Varejo</div>
+                <div class="project-name">Mascote Comercial</div>
+                <div class="project-meta">Mascote &middot; Personagem de marca</div>
                 <button class="watch-btn js-watch">Assistir v&iacute;deo</button>
               </div>
             </article>
-            <article class="glass-card portfolio-card reveal" data-format="3D Premium / POV" data-name="POV Produto Premium" data-segment="Ind&uacute;stria" data-video="" style="--thumb-bg: linear-gradient(180deg, rgba(0,0,0,0.04), rgba(0,0,0,0.72)), url('assets/capas-videos/pov.png') center / cover;">
+            <article class="glass-card portfolio-card reveal" data-format="Influencer Real" data-name="Influencer Real" data-segment="Apresentador e UGC" data-video="" style="--thumb-bg: linear-gradient(180deg, rgba(0,0,0,0.04), rgba(0,0,0,0.72)), url('assets/capas-videos/influencer-real.png') center / cover;">
               <div class="reel-thumb"><span class="play-chip" aria-hidden="true"></span></div>
               <div class="portfolio-info">
-                <div class="project-name">POV Produto Premium</div>
-                <div class="project-meta">3D Premium / POV &middot; Ind&uacute;stria</div>
+                <div class="project-name">Influencer Real</div>
+                <div class="project-meta">Influencer Real &middot; Apresentador e UGC</div>
+                <button class="watch-btn js-watch">Assistir v&iacute;deo</button>
+              </div>
+            </article>
+            <article class="glass-card portfolio-card reveal" data-format="Influencer IA" data-name="Influencer IA" data-segment="Criador virtual" data-video="" style="--thumb-bg: linear-gradient(180deg, rgba(0,0,0,0.04), rgba(0,0,0,0.72)), url('assets/capas-videos/ugc-com-ia.png') center / cover;">
+              <div class="reel-thumb"><span class="play-chip" aria-hidden="true"></span></div>
+              <div class="portfolio-info">
+                <div class="project-name">Influencer IA</div>
+                <div class="project-meta">Influencer IA &middot; Criador virtual</div>
                 <button class="watch-btn js-watch">Assistir v&iacute;deo</button>
               </div>
             </article>
@@ -1820,27 +1829,19 @@
                 <button class="watch-btn js-watch">Assistir v&iacute;deo</button>
               </div>
             </article>
-            <article class="glass-card portfolio-card reveal" data-format="Tr&aacute;fego Pago" data-name="Criativo de Convers&atilde;o" data-segment="Com&eacute;rcio Local" data-video="" style="--thumb-bg: linear-gradient(180deg, rgba(0,0,0,0.04), rgba(0,0,0,0.72)), url('assets/capas-videos/trafego-pago.png') center / cover;">
+            <article class="glass-card portfolio-card reveal" data-format="POV" data-name="POV Produto Premium" data-segment="Experi&ecirc;ncia visual" data-video="" style="--thumb-bg: linear-gradient(180deg, rgba(0,0,0,0.04), rgba(0,0,0,0.72)), url('assets/capas-videos/pov.png') center / cover;">
               <div class="reel-thumb"><span class="play-chip" aria-hidden="true"></span></div>
               <div class="portfolio-info">
-                <div class="project-name">Criativo de Convers&atilde;o</div>
-                <div class="project-meta">Tr&aacute;fego Pago &middot; Com&eacute;rcio Local</div>
+                <div class="project-name">POV Produto Premium</div>
+                <div class="project-meta">POV &middot; Experi&ecirc;ncia visual</div>
                 <button class="watch-btn js-watch">Assistir v&iacute;deo</button>
               </div>
             </article>
-            <article class="glass-card portfolio-card reveal" data-format="Storytelling" data-name="V&iacute;deo Institucional com Storytelling" data-segment="Marca" data-video="" style="--thumb-bg: linear-gradient(180deg, rgba(0,0,0,0.04), rgba(0,0,0,0.72)), url('assets/capas-videos/storytelling.png') center / cover;">
+            <article class="glass-card portfolio-card reveal" data-format="Lan&ccedil;amentos" data-name="Lan&ccedil;amentos e Novidades" data-segment="Campanhas recentes" data-video="" style="--thumb-bg: linear-gradient(180deg, rgba(0,0,0,0.04), rgba(0,0,0,0.72)), url('assets/capas-videos/lancamentos.png') center / cover;">
               <div class="reel-thumb"><span class="play-chip" aria-hidden="true"></span></div>
               <div class="portfolio-info">
-                <div class="project-name">V&iacute;deo Institucional com Storytelling</div>
-                <div class="project-meta">Storytelling &middot; Marca</div>
-                <button class="watch-btn js-watch">Assistir v&iacute;deo</button>
-              </div>
-            </article>
-            <article class="glass-card portfolio-card reveal" data-format="Pessoas Reais" data-name="Depoimento de Cliente" data-segment="Imobili&aacute;rias" data-video="" style="--thumb-bg: linear-gradient(180deg, rgba(0,0,0,0.04), rgba(0,0,0,0.72)), url('assets/capas-videos/ugc-real.png') center / cover;">
-              <div class="reel-thumb"><span class="play-chip" aria-hidden="true"></span></div>
-              <div class="portfolio-info">
-                <div class="project-name">Depoimento de Cliente</div>
-                <div class="project-meta">Pessoas Reais &middot; Imobili&aacute;rias</div>
+                <div class="project-name">Lan&ccedil;amentos e Novidades</div>
+                <div class="project-meta">Lan&ccedil;amentos &middot; Campanhas recentes</div>
                 <button class="watch-btn js-watch">Assistir v&iacute;deo</button>
               </div>
             </article>
