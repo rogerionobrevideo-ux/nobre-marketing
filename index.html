@@ -974,6 +974,25 @@
       margin-left: 3px;
     }
 
+    .reel-label {
+      position: absolute;
+      left: 12px;
+      bottom: 14px;
+      z-index: 2;
+      max-width: calc(100% - 68px);
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(229, 9, 20, 0.95);
+      color: #ffffff;
+      font-family: var(--font-strong);
+      font-size: 0.72rem;
+      font-weight: 950;
+      line-height: 1;
+      text-transform: uppercase;
+      white-space: normal;
+      box-shadow: 0 12px 30px rgba(229, 9, 20, 0.34);
+    }
+
     .portfolio-info {
       display: grid;
       gap: 8px;
@@ -1711,7 +1730,7 @@
               </div>
             </article>
             <article class="glass-card format-card reveal">
-              <div class="format-media" style="--format-bg: linear-gradient(180deg, rgba(0,0,0,0), rgba(0,0,0,0.72)), url('assets/capas-videos/influencer-ia.png');"><strong>Intelig&ecirc;ncia Artificial</strong></div>
+              <div class="format-media" style="--format-bg: linear-gradient(180deg, rgba(0,0,0,0), rgba(0,0,0,0.72)), url('assets/capas-videos/influencer-ia.png');"><strong>Influencer IA</strong></div>
               <div class="format-body">
                 <h3>Intelig&ecirc;ncia Artificial</h3>
                 <p>Mascotes, personagens, criadores virtuais e cenas comerciais criadas com IA.</p>
@@ -1789,8 +1808,8 @@
                 <button class="watch-btn js-watch">Assistir v&iacute;deo</button>
               </div>
             </article>
-            <article class="glass-card portfolio-card reveal" data-format="Influencer Real" data-name="Influencer Real" data-segment="Apresentador e UGC" data-video="" style="--thumb-bg: linear-gradient(180deg, rgba(0,0,0,0.04), rgba(0,0,0,0.72)), url('assets/capas-videos/influencer-real.png') center / cover;">
-              <div class="reel-thumb"><span class="play-chip" aria-hidden="true"></span></div>
+            <article class="glass-card portfolio-card reveal" data-format="Influencer Real" data-name="Influencer Real" data-segment="Apresentador e UGC" data-video="" style="--thumb-bg: linear-gradient(180deg, rgba(0,0,0,0.02), rgba(0,0,0,0.7)), url('assets/capas-videos/influencer-real-nobre.jpeg') center / cover;">
+              <div class="reel-thumb"><span class="reel-label">Influencer Real</span><span class="play-chip" aria-hidden="true"></span></div>
               <div class="portfolio-info">
                 <div class="project-name">Influencer Real</div>
                 <div class="project-meta">Influencer Real &middot; Apresentador e UGC</div>
@@ -1798,7 +1817,7 @@
               </div>
             </article>
             <article class="glass-card portfolio-card reveal" data-format="Influencer IA" data-name="Influencer IA" data-segment="Criador virtual" data-video="" style="--thumb-bg: linear-gradient(180deg, rgba(0,0,0,0.04), rgba(0,0,0,0.72)), url('assets/capas-videos/influencer-ia.png') center / cover;">
-              <div class="reel-thumb"><span class="play-chip" aria-hidden="true"></span></div>
+              <div class="reel-thumb"><span class="reel-label">Influencer IA</span><span class="play-chip" aria-hidden="true"></span></div>
               <div class="portfolio-info">
                 <div class="project-name">Influencer IA</div>
                 <div class="project-meta">Influencer IA &middot; Criador virtual</div>
