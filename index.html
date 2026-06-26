@@ -935,9 +935,7 @@
       aspect-ratio: 9 / 16;
       position: relative;
       overflow: hidden;
-      background:
-        linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(0, 0, 0, 0.65)),
-        var(--thumb-bg);
+      background: var(--thumb-bg);
       background-size: cover;
       background-position: center;
     }
@@ -947,8 +945,9 @@
       position: absolute;
       inset: 0;
       background:
-        radial-gradient(circle at 55% 18%, rgba(255, 255, 255, 0.28), transparent 16%),
-        linear-gradient(180deg, rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.78));
+        radial-gradient(circle at 55% 18%, rgba(255, 255, 255, 0.18), transparent 14%),
+        linear-gradient(180deg, rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.12));
+      pointer-events: none;
     }
 
     .play-chip {
@@ -1792,7 +1791,7 @@
               data-segment = segmento
               data-video = link do video embed, YouTube, Vimeo ou arquivo MP4
             -->
-            <article class="glass-card portfolio-card reveal" data-format="3D Pixar" data-name="Personagem 3D Pixar" data-segment="IA 3D" data-video="" style="--thumb-bg: linear-gradient(180deg, rgba(0,0,0,0.05), rgba(0,0,0,0.7)), url('assets/capas-videos/banner-3d-pixar.png') center / cover;">
+            <article class="glass-card portfolio-card reveal" data-format="3D Pixar" data-name="Personagem 3D Pixar" data-segment="IA 3D" data-video="" style="--thumb-bg: url('assets/capas-videos/banner-3d-pixar.png') center / cover;">
               <div class="reel-thumb"><span class="play-chip" aria-hidden="true"></span></div>
               <div class="portfolio-info">
                 <div class="project-name">Personagem 3D Pixar</div>
@@ -1800,7 +1799,7 @@
                 <button class="watch-btn js-watch">Assistir v&iacute;deo</button>
               </div>
             </article>
-            <article class="glass-card portfolio-card reveal" data-format="Mascote" data-name="Mascote Comercial" data-segment="Personagem de marca" data-video="" style="--thumb-bg: linear-gradient(180deg, rgba(0,0,0,0.04), rgba(0,0,0,0.72)), url('assets/capas-videos/banner-mascote.png') center / cover;">
+            <article class="glass-card portfolio-card reveal" data-format="Mascote" data-name="Mascote Comercial" data-segment="Personagem de marca" data-video="" style="--thumb-bg: url('assets/capas-videos/banner-mascote.png') center / cover;">
               <div class="reel-thumb"><span class="play-chip" aria-hidden="true"></span></div>
               <div class="portfolio-info">
                 <div class="project-name">Mascote Comercial</div>
@@ -1808,7 +1807,7 @@
                 <button class="watch-btn js-watch">Assistir v&iacute;deo</button>
               </div>
             </article>
-            <article class="glass-card portfolio-card reveal" data-format="Influencer Real" data-name="Influencer Real" data-segment="Apresentador e UGC" data-video="" style="--thumb-bg: linear-gradient(180deg, rgba(0,0,0,0.02), rgba(0,0,0,0.7)), url('assets/capas-videos/banner-influencer-real.png') center / cover;">
+            <article class="glass-card portfolio-card reveal" data-format="Influencer Real" data-name="Influencer Real" data-segment="Apresentador e UGC" data-video="" style="--thumb-bg: url('assets/capas-videos/banner-influencer-real.png') center / cover;">
               <div class="reel-thumb"><span class="play-chip" aria-hidden="true"></span></div>
               <div class="portfolio-info">
                 <div class="project-name">Influencer Real</div>
@@ -1816,7 +1815,7 @@
                 <button class="watch-btn js-watch">Assistir v&iacute;deo</button>
               </div>
             </article>
-            <article class="glass-card portfolio-card reveal" data-format="Influencer IA" data-name="Influencer IA" data-segment="Criador virtual" data-video="" style="--thumb-bg: linear-gradient(180deg, rgba(0,0,0,0.04), rgba(0,0,0,0.72)), url('assets/capas-videos/banner-influencer-ia.png') center / cover;">
+            <article class="glass-card portfolio-card reveal" data-format="Influencer IA" data-name="Influencer IA" data-segment="Criador virtual" data-video="" style="--thumb-bg: url('assets/capas-videos/banner-influencer-ia.png') center / cover;">
               <div class="reel-thumb"><span class="play-chip" aria-hidden="true"></span></div>
               <div class="portfolio-info">
                 <div class="project-name">Influencer IA</div>
@@ -1824,7 +1823,7 @@
                 <button class="watch-btn js-watch">Assistir v&iacute;deo</button>
               </div>
             </article>
-            <article class="glass-card portfolio-card reveal" data-format="Whiteboard" data-name="Explicativo Whiteboard" data-segment="Tecnologia" data-video="" style="--thumb-bg: linear-gradient(180deg, rgba(0,0,0,0.04), rgba(0,0,0,0.72)), url('assets/capas-videos/banner-whiteboard.png') center / cover;">
+            <article class="glass-card portfolio-card reveal" data-format="Whiteboard" data-name="Explicativo Whiteboard" data-segment="Tecnologia" data-video="" style="--thumb-bg: url('assets/capas-videos/banner-whiteboard.png') center / cover;">
               <div class="reel-thumb"><span class="play-chip" aria-hidden="true"></span></div>
               <div class="portfolio-info">
                 <div class="project-name">Explicativo Whiteboard</div>
@@ -1832,7 +1831,7 @@
                 <button class="watch-btn js-watch">Assistir v&iacute;deo</button>
               </div>
             </article>
-            <article class="glass-card portfolio-card reveal" data-format="VSL" data-name="VSL Oferta Comercial" data-segment="Sa&uacute;de" data-video="" style="--thumb-bg: linear-gradient(180deg, rgba(0,0,0,0.04), rgba(0,0,0,0.72)), url('assets/capas-videos/banner-vsl.png') center / cover;">
+            <article class="glass-card portfolio-card reveal" data-format="VSL" data-name="VSL Oferta Comercial" data-segment="Sa&uacute;de" data-video="" style="--thumb-bg: url('assets/capas-videos/banner-vsl.png') center / cover;">
               <div class="reel-thumb"><span class="play-chip" aria-hidden="true"></span></div>
               <div class="portfolio-info">
                 <div class="project-name">VSL Oferta Comercial</div>
@@ -1840,7 +1839,7 @@
                 <button class="watch-btn js-watch">Assistir v&iacute;deo</button>
               </div>
             </article>
-            <article class="glass-card portfolio-card reveal" data-format="POV" data-name="POV Produto Premium" data-segment="Experi&ecirc;ncia visual" data-video="" style="--thumb-bg: linear-gradient(180deg, rgba(0,0,0,0.04), rgba(0,0,0,0.72)), url('assets/capas-videos/banner-pov.png') center / cover;">
+            <article class="glass-card portfolio-card reveal" data-format="POV" data-name="POV Produto Premium" data-segment="Experi&ecirc;ncia visual" data-video="" style="--thumb-bg: url('assets/capas-videos/banner-pov.png') center / cover;">
               <div class="reel-thumb"><span class="play-chip" aria-hidden="true"></span></div>
               <div class="portfolio-info">
                 <div class="project-name">POV Produto Premium</div>
@@ -1848,7 +1847,7 @@
                 <button class="watch-btn js-watch">Assistir v&iacute;deo</button>
               </div>
             </article>
-            <article class="glass-card portfolio-card reveal" data-format="Lan&ccedil;amentos" data-name="Lan&ccedil;amentos e Novidades" data-segment="Campanhas recentes" data-video="" style="--thumb-bg: linear-gradient(180deg, rgba(0,0,0,0.04), rgba(0,0,0,0.72)), url('assets/capas-videos/banner-lancamentos.png') center / cover;">
+            <article class="glass-card portfolio-card reveal" data-format="Lan&ccedil;amentos" data-name="Lan&ccedil;amentos e Novidades" data-segment="Campanhas recentes" data-video="" style="--thumb-bg: url('assets/capas-videos/banner-lancamentos.png') center / cover;">
               <div class="reel-thumb"><span class="play-chip" aria-hidden="true"></span></div>
               <div class="portfolio-info">
                 <div class="project-name">Lan&ccedil;amentos e Novidades</div>
