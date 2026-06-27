@@ -1305,7 +1305,7 @@
     .video-frame {
       aspect-ratio: 9 / 16;
       width: min(100%, 360px);
-      margin: 18px auto;
+      margin: 0 auto;
       border: 1px solid rgba(255, 255, 255, 0.14);
       border-radius: var(--radius);
       overflow: hidden;
@@ -1322,10 +1322,13 @@
 
     .video-switcher {
       display: none;
+      position: absolute;
+      inset: 0;
+      z-index: 3;
       align-items: center;
       justify-content: space-between;
-      gap: 14px;
-      padding: 14px 16px 0;
+      padding: 0 4px;
+      pointer-events: none;
     }
 
     .video-switcher.has-multiple {
@@ -1333,17 +1336,19 @@
     }
 
     .video-arrow {
-      width: 46px;
-      height: 46px;
+      width: 50px;
+      height: 50px;
       display: grid;
       place-items: center;
       flex: 0 0 auto;
-      border: 1px solid rgba(229, 9, 20, 0.75);
+      border: 2px solid rgba(255, 255, 255, 0.9);
       border-radius: 50%;
-      background: rgba(229, 9, 20, 0.16);
+      background: rgba(229, 9, 20, 0.94);
       color: var(--white);
-      font-size: 1.75rem;
+      box-shadow: 0 8px 28px rgba(0, 0, 0, 0.72), 0 0 22px rgba(229, 9, 20, 0.4);
+      font-size: 2rem;
       line-height: 1;
+      pointer-events: auto;
       transition: background 180ms ease, transform 180ms ease;
     }
 
@@ -1353,9 +1358,22 @@
     }
 
     .video-counter {
+      position: absolute;
+      top: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(0, 0, 0, 0.8);
       color: var(--muted);
       font-size: 0.82rem;
       font-weight: 900;
+    }
+
+    .video-stage {
+      position: relative;
+      width: min(calc(100% - 20px), 390px);
+      margin: 18px auto;
     }
 
     .video-placeholder {
@@ -2009,8 +2027,10 @@
         </div>
         <button class="modal-close" id="modalClose" aria-label="Fechar modal">&times;</button>
       </div>
-      <div class="video-switcher" id="videoSwitcher" aria-label="Escolher exemplo de v&iacute;deo"></div>
-      <div class="video-frame" id="videoFrame"></div>
+      <div class="video-stage">
+        <div class="video-switcher" id="videoSwitcher" aria-label="Escolher exemplo de v&iacute;deo"></div>
+        <div class="video-frame" id="videoFrame"></div>
+      </div>
     </div>
   </div>
 
