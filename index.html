@@ -1320,6 +1320,31 @@
       border: 0;
     }
 
+    .video-switcher {
+      display: none;
+      gap: 8px;
+      padding: 14px 16px 0;
+    }
+
+    .video-switcher.has-multiple {
+      display: flex;
+    }
+
+    .video-switch-btn {
+      flex: 1;
+      min-height: 42px;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      border-radius: 6px;
+      background: rgba(255, 255, 255, 0.06);
+      color: var(--white);
+      font-weight: 900;
+    }
+
+    .video-switch-btn.is-active {
+      border-color: var(--red);
+      background: var(--red);
+    }
+
     .video-placeholder {
       width: 100%;
       height: 100%;
@@ -1790,9 +1815,9 @@
               data-name = nome do projeto
               data-format = formato
               data-segment = segmento
-              data-video = link do video embed, YouTube, Vimeo ou arquivo MP4
+              data-videos = um ou mais links separados por |
             -->
-            <article class="glass-card portfolio-card reveal" data-format="3D Pixar" data-name="Personagem 3D Pixar" data-segment="IA 3D" data-video="" style="--thumb-bg: url('assets/capas-videos/3d-premium.webp') center / cover;">
+            <article class="glass-card portfolio-card reveal" data-format="3D Pixar" data-name="Personagem 3D Pixar" data-segment="IA 3D" data-videos="https://vimeo.com/1204589721?fl=tl&amp;fe=ec" style="--thumb-bg: url('assets/capas-videos/3d-premium.webp') center / cover;">
               <div class="reel-thumb"><span class="play-chip" aria-hidden="true"></span></div>
               <div class="portfolio-info">
                 <div class="project-name">Personagem 3D Pixar</div>
@@ -1800,7 +1825,7 @@
                 <button class="watch-btn js-watch">Assistir v&iacute;deo</button>
               </div>
             </article>
-            <article class="glass-card portfolio-card reveal" data-format="Mascote" data-name="Mascote Comercial" data-segment="Personagem de marca" data-video="" style="--thumb-bg: url('assets/capas-videos/mascote.webp') center / cover;">
+            <article class="glass-card portfolio-card reveal" data-format="Mascote" data-name="Mascote Comercial" data-segment="Personagem de marca" data-videos="https://vimeo.com/1204588657?fl=tl&amp;fe=ec|https://vimeo.com/1204589243?fl=tl&amp;fe=ec" style="--thumb-bg: url('assets/capas-videos/mascote.webp') center / cover;">
               <div class="reel-thumb"><span class="play-chip" aria-hidden="true"></span></div>
               <div class="portfolio-info">
                 <div class="project-name">Mascote Comercial</div>
@@ -1808,7 +1833,7 @@
                 <button class="watch-btn js-watch">Assistir v&iacute;deo</button>
               </div>
             </article>
-            <article class="glass-card portfolio-card reveal" data-format="Influencer Real" data-name="Influencer Real" data-segment="Apresentador e UGC" data-video="" style="--thumb-bg: url('assets/capas-videos/influencer-real-banner.webp') center / cover;">
+            <article class="glass-card portfolio-card reveal" data-format="Influencer Real" data-name="Influencer Real" data-segment="Apresentador e UGC" data-videos="https://vimeo.com/1204599510?fl=tl&amp;fe=ec|https://vimeo.com/1204587935?fl=tl&amp;fe=ec" style="--thumb-bg: url('assets/capas-videos/influencer-real-banner.webp') center / cover;">
               <div class="reel-thumb"><span class="play-chip" aria-hidden="true"></span></div>
               <div class="portfolio-info">
                 <div class="project-name">Influencer Real</div>
@@ -1816,7 +1841,7 @@
                 <button class="watch-btn js-watch">Assistir v&iacute;deo</button>
               </div>
             </article>
-            <article class="glass-card portfolio-card reveal" data-format="Influencer IA" data-name="Influencer IA" data-segment="Criador virtual" data-video="" style="--thumb-bg: url('assets/capas-videos/influencer-ia.webp') center / cover;">
+            <article class="glass-card portfolio-card reveal" data-format="Influencer IA" data-name="Influencer IA" data-segment="Criador virtual" data-videos="https://vimeo.com/1204591378?fl=tl&amp;fe=ec" style="--thumb-bg: url('assets/capas-videos/influencer-ia.webp') center / cover;">
               <div class="reel-thumb"><span class="play-chip" aria-hidden="true"></span></div>
               <div class="portfolio-info">
                 <div class="project-name">Influencer IA</div>
@@ -1824,7 +1849,7 @@
                 <button class="watch-btn js-watch">Assistir v&iacute;deo</button>
               </div>
             </article>
-            <article class="glass-card portfolio-card reveal" data-format="Whiteboard" data-name="Explicativo Whiteboard" data-segment="Tecnologia" data-video="" style="--thumb-bg: url('assets/capas-videos/whiteboard.webp') center / cover;">
+            <article class="glass-card portfolio-card reveal" data-format="Whiteboard" data-name="Explicativo Whiteboard" data-segment="Tecnologia" data-videos="https://vimeo.com/1204594752?fl=tl&amp;fe=ec" style="--thumb-bg: url('assets/capas-videos/whiteboard.webp') center / cover;">
               <div class="reel-thumb"><span class="play-chip" aria-hidden="true"></span></div>
               <div class="portfolio-info">
                 <div class="project-name">Explicativo Whiteboard</div>
@@ -1832,7 +1857,7 @@
                 <button class="watch-btn js-watch">Assistir v&iacute;deo</button>
               </div>
             </article>
-            <article class="glass-card portfolio-card reveal" data-format="VSL" data-name="VSL Oferta Comercial" data-segment="Sa&uacute;de" data-video="" style="--thumb-bg: url('assets/capas-videos/vsl.webp') center / cover;">
+            <article class="glass-card portfolio-card reveal" data-format="VSL" data-name="VSL Oferta Comercial" data-segment="Sa&uacute;de" data-videos="https://vimeo.com/1204591130?fl=tl&amp;fe=ec" style="--thumb-bg: url('assets/capas-videos/vsl.webp') center / cover;">
               <div class="reel-thumb"><span class="play-chip" aria-hidden="true"></span></div>
               <div class="portfolio-info">
                 <div class="project-name">VSL Oferta Comercial</div>
@@ -1840,7 +1865,7 @@
                 <button class="watch-btn js-watch">Assistir v&iacute;deo</button>
               </div>
             </article>
-            <article class="glass-card portfolio-card reveal" data-format="POV" data-name="POV Produto Premium" data-segment="Experi&ecirc;ncia visual" data-video="" style="--thumb-bg: url('assets/capas-videos/pov.webp') center / cover;">
+            <article class="glass-card portfolio-card reveal" data-format="POV" data-name="POV Produto Premium" data-segment="Experi&ecirc;ncia visual" data-videos="https://vimeo.com/1204600131?fl=tl&amp;fe=ec" style="--thumb-bg: url('assets/capas-videos/pov.webp') center / cover;">
               <div class="reel-thumb"><span class="play-chip" aria-hidden="true"></span></div>
               <div class="portfolio-info">
                 <div class="project-name">POV Produto Premium</div>
@@ -1848,7 +1873,7 @@
                 <button class="watch-btn js-watch">Assistir v&iacute;deo</button>
               </div>
             </article>
-            <article class="glass-card portfolio-card reveal" data-format="Lan&ccedil;amentos" data-name="Lan&ccedil;amentos e Novidades" data-segment="Campanhas recentes" data-video="" style="--thumb-bg: url('assets/capas-videos/lancamentos.webp') center / cover;">
+            <article class="glass-card portfolio-card reveal" data-format="Lan&ccedil;amentos" data-name="Lan&ccedil;amentos e Novidades" data-segment="Campanhas recentes" data-videos="" style="--thumb-bg: url('assets/capas-videos/lancamentos.webp') center / cover;">
               <div class="reel-thumb"><span class="play-chip" aria-hidden="true"></span></div>
               <div class="portfolio-info">
                 <div class="project-name">Lan&ccedil;amentos e Novidades</div>
@@ -1856,7 +1881,7 @@
                 <button class="watch-btn js-watch">Assistir v&iacute;deo</button>
               </div>
             </article>
-            <article class="glass-card portfolio-card reveal" data-format="Virais" data-name="V&iacute;deos Virais" data-segment="Conte&uacute;do de alto alcance" data-video="" style="--thumb-bg: url('assets/capas-videos/virais.webp') center / cover;">
+            <article class="glass-card portfolio-card reveal" data-format="Virais" data-name="V&iacute;deos Virais" data-segment="Conte&uacute;do de alto alcance" data-videos="https://vimeo.com/1204598813?fl=tl&amp;fe=ec|https://vimeo.com/1204592213?fl=tl&amp;fe=ec" style="--thumb-bg: url('assets/capas-videos/virais.webp') center / cover;">
               <div class="reel-thumb"><span class="play-chip" aria-hidden="true"></span></div>
               <div class="portfolio-info">
                 <div class="project-name">V&iacute;deos Virais</div>
@@ -1953,6 +1978,7 @@
         </div>
         <button class="modal-close" id="modalClose" aria-label="Fechar modal">&times;</button>
       </div>
+      <div class="video-switcher" id="videoSwitcher" aria-label="Escolher exemplo de v&iacute;deo"></div>
       <div class="video-frame" id="videoFrame"></div>
     </div>
   </div>
@@ -1967,6 +1993,7 @@
     const modalTitle = document.querySelector("#modalTitle");
     const modalMeta = document.querySelector("#modalMeta");
     const videoFrame = document.querySelector("#videoFrame");
+    const videoSwitcher = document.querySelector("#videoSwitcher");
 
     function applyFilter(filter) {
       filterButtons.forEach((button) => {
@@ -1993,28 +2020,49 @@
       });
     });
 
+    function normalizeVideoUrl(videoUrl) {
+      const vimeoMatch = videoUrl.match(/vimeo\.com\/(?:video\/)?(\d+)/i);
+      if (vimeoMatch) return `https://player.vimeo.com/video/${vimeoMatch[1]}?autoplay=1`;
+      return videoUrl;
+    }
+
     function buildVideoContent(videoUrl, name) {
       if (!videoUrl) {
         return `<div class="video-placeholder">Espa&ccedil;o reservado para o v&iacute;deo:<br>${name}</div>`;
       }
 
+      const normalizedUrl = normalizeVideoUrl(videoUrl);
       const isDirectVideo = /\.(mp4|webm|ogg)(\?.*)?$/i.test(videoUrl);
       if (isDirectVideo) {
-        return `<video src="${videoUrl}" controls playsinline preload="metadata"></video>`;
+        return `<video src="${normalizedUrl}" controls playsinline preload="metadata"></video>`;
       }
 
-      return `<iframe src="${videoUrl}" title="${name}" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>`;
+      return `<iframe src="${normalizedUrl}" title="${name}" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>`;
+    }
+
+    function showVideo(videoUrls, index, name) {
+      videoFrame.innerHTML = buildVideoContent(videoUrls[index], name);
+      videoSwitcher.querySelectorAll(".video-switch-btn").forEach((button, buttonIndex) => {
+        button.classList.toggle("is-active", buttonIndex === index);
+      });
     }
 
     function openModal(card) {
       const name = card.dataset.name;
       const format = card.dataset.format;
       const segment = card.dataset.segment;
-      const videoUrl = card.dataset.video;
+      const videoUrls = (card.dataset.videos || "").split("|").filter(Boolean);
 
       modalTitle.textContent = name;
-      modalMeta.textContent = `${format} &middot; ${segment}`;
-      videoFrame.innerHTML = buildVideoContent(videoUrl, name);
+      modalMeta.innerHTML = `${format} &middot; ${segment}`;
+      videoSwitcher.innerHTML = videoUrls.map((_, index) =>
+        `<button class="video-switch-btn${index === 0 ? " is-active" : ""}" type="button">V&iacute;deo ${index + 1}</button>`
+      ).join("");
+      videoSwitcher.classList.toggle("has-multiple", videoUrls.length > 1);
+      videoSwitcher.querySelectorAll(".video-switch-btn").forEach((button, index) => {
+        button.addEventListener("click", () => showVideo(videoUrls, index, name));
+      });
+      videoFrame.innerHTML = buildVideoContent(videoUrls[0] || "", name);
       modal.classList.add("is-open");
       modal.setAttribute("aria-hidden", "false");
       document.body.classList.add("modal-open");
@@ -2026,6 +2074,7 @@
       modal.setAttribute("aria-hidden", "true");
       document.body.classList.remove("modal-open");
       videoFrame.innerHTML = "";
+      videoSwitcher.innerHTML = "";
     }
 
     watchButtons.forEach((button) => {
