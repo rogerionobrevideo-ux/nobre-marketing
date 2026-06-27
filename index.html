@@ -2096,7 +2096,7 @@
 
     function normalizeVideoUrl(videoUrl) {
       const vimeoMatch = videoUrl.match(/vimeo\.com\/(?:video\/)?(\d+)/i);
-      if (vimeoMatch) return `https://player.vimeo.com/video/${vimeoMatch[1]}?autoplay=0&dnt=1&title=0&byline=0&portrait=0`;
+      if (vimeoMatch) return `https://player.vimeo.com/video/${vimeoMatch[1]}?autoplay=0&muted=0&dnt=1&title=0&byline=0&portrait=0`;
       return videoUrl;
     }
 
