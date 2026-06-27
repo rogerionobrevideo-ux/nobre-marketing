@@ -1031,6 +1031,12 @@
       background: var(--red);
     }
 
+    .watch-btn:disabled {
+      cursor: default;
+      opacity: 0.62;
+      background: rgba(255, 255, 255, 0.07);
+    }
+
     .benefit-card {
       min-height: 310px;
       position: relative;
@@ -1841,6 +1847,7 @@
             <button class="filter-btn" data-filter="POV">POV</button>
             <button class="filter-btn" data-filter="Lan&ccedil;amentos">Lan&ccedil;amentos</button>
             <button class="filter-btn" data-filter="Virais">Virais</button>
+            <button class="filter-btn" data-filter="Musicais">Musicais</button>
           </div>
           <div class="portfolio-grid" id="portfolioGrid">
             <!--
@@ -1938,6 +1945,14 @@
                 <div class="project-name">V&iacute;deos Virais</div>
                 <div class="project-meta">Virais &middot; Conte&uacute;do de alto alcance</div>
                 <button class="watch-btn js-watch">Assistir v&iacute;deo</button>
+              </div>
+            </article>
+            <article class="glass-card portfolio-card reveal" data-format="Musicais" data-name="Musicais" data-segment="V&iacute;deos com m&uacute;sica" data-videos="" data-lazy-style="--thumb-bg: url('assets/capas-videos/musicais.webp') center / cover;">
+              <div class="reel-thumb"></div>
+              <div class="portfolio-info">
+                <div class="project-name">Musicais</div>
+                <div class="project-meta">Musicais &middot; V&iacute;deos com m&uacute;sica</div>
+                <button class="watch-btn" type="button" disabled>Em breve</button>
               </div>
             </article>
           </div>
