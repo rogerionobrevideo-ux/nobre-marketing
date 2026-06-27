@@ -1322,7 +1322,9 @@
 
     .video-switcher {
       display: none;
-      gap: 8px;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
       padding: 14px 16px 0;
     }
 
@@ -1330,19 +1332,30 @@
       display: flex;
     }
 
-    .video-switch-btn {
-      flex: 1;
-      min-height: 42px;
-      border: 1px solid rgba(255, 255, 255, 0.16);
-      border-radius: 6px;
-      background: rgba(255, 255, 255, 0.06);
+    .video-arrow {
+      width: 46px;
+      height: 46px;
+      display: grid;
+      place-items: center;
+      flex: 0 0 auto;
+      border: 1px solid rgba(229, 9, 20, 0.75);
+      border-radius: 50%;
+      background: rgba(229, 9, 20, 0.16);
       color: var(--white);
-      font-weight: 900;
+      font-size: 1.75rem;
+      line-height: 1;
+      transition: background 180ms ease, transform 180ms ease;
     }
 
-    .video-switch-btn.is-active {
-      border-color: var(--red);
+    .video-arrow:hover {
       background: var(--red);
+      transform: scale(1.06);
+    }
+
+    .video-counter {
+      color: var(--muted);
+      font-size: 0.82rem;
+      font-weight: 900;
     }
 
     .video-placeholder {
@@ -2041,10 +2054,11 @@
     }
 
     function showVideo(videoUrls, index, name) {
-      videoFrame.innerHTML = buildVideoContent(videoUrls[index], name);
-      videoSwitcher.querySelectorAll(".video-switch-btn").forEach((button, buttonIndex) => {
-        button.classList.toggle("is-active", buttonIndex === index);
-      });
+      const safeIndex = (index + videoUrls.length) % videoUrls.length;
+      videoFrame.innerHTML = buildVideoContent(videoUrls[safeIndex], name);
+      videoSwitcher.dataset.current = safeIndex;
+      const counter = videoSwitcher.querySelector(".video-counter");
+      if (counter) counter.textContent = `${safeIndex + 1} / ${videoUrls.length}`;
     }
 
     function openModal(card) {
@@ -2055,12 +2069,18 @@
 
       modalTitle.textContent = name;
       modalMeta.innerHTML = `${format} &middot; ${segment}`;
-      videoSwitcher.innerHTML = videoUrls.map((_, index) =>
-        `<button class="video-switch-btn${index === 0 ? " is-active" : ""}" type="button">V&iacute;deo ${index + 1}</button>`
-      ).join("");
+      videoSwitcher.innerHTML = videoUrls.length > 1 ? `
+        <button class="video-arrow video-prev" type="button" aria-label="V&iacute;deo anterior">&#8249;</button>
+        <span class="video-counter" aria-live="polite">1 / ${videoUrls.length}</span>
+        <button class="video-arrow video-next" type="button" aria-label="Pr&oacute;ximo v&iacute;deo">&#8250;</button>
+      ` : "";
       videoSwitcher.classList.toggle("has-multiple", videoUrls.length > 1);
-      videoSwitcher.querySelectorAll(".video-switch-btn").forEach((button, index) => {
-        button.addEventListener("click", () => showVideo(videoUrls, index, name));
+      videoSwitcher.dataset.current = "0";
+      videoSwitcher.querySelector(".video-prev")?.addEventListener("click", () => {
+        showVideo(videoUrls, Number(videoSwitcher.dataset.current) - 1, name);
+      });
+      videoSwitcher.querySelector(".video-next")?.addEventListener("click", () => {
+        showVideo(videoUrls, Number(videoSwitcher.dataset.current) + 1, name);
       });
       videoFrame.innerHTML = buildVideoContent(videoUrls[0] || "", name);
       modal.classList.add("is-open");
