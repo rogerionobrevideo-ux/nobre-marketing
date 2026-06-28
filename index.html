@@ -2058,20 +2058,24 @@
       lazyBackgrounds.forEach(loadBackground);
     }
 
-    function applyFilter(filter) {
+    function applyFilter(filter, scrollToCard = false) {
       filterButtons.forEach((button) => {
         button.classList.toggle("is-active", button.dataset.filter === filter);
       });
 
       cards.forEach((card) => {
-        const shouldShow = card.dataset.format === filter;
-        card.classList.toggle("is-hidden", !shouldShow);
+        card.classList.remove("is-hidden");
       });
+
+      if (scrollToCard) {
+        const selectedCard = [...cards].find((card) => card.dataset.format === filter);
+        selectedCard?.scrollIntoView({ behavior: "smooth", block: "center" });
+      }
     }
 
     filterButtons.forEach((button) => {
       button.addEventListener("click", () => {
-        applyFilter(button.dataset.filter);
+        applyFilter(button.dataset.filter, true);
       });
     });
 
