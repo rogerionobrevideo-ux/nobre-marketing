@@ -4,12 +4,39 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Nobre Marketing produz v&iacute;deos comerciais, criativos para tr&aacute;fego pago, VSLs, v&iacute;deos institucionais, mascotes 3D e formatos premium para empresas." />
+  <meta name="theme-color" content="#050505" />
   <title>Nobre Marketing | V&iacute;deos que geram vendas</title>
+  <link rel="canonical" href="https://rogerionobrevideo-ux.github.io/nobre-marketing/opcao-2/" />
+  <link rel="icon" type="image/webp" href="assets/nobre-symbol-transparent.webp" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Nobre Marketing" />
+  <meta property="og:title" content="Nobre Marketing | V&iacute;deos que geram vendas" />
+  <meta property="og:description" content="Produ&ccedil;&atilde;o premium de v&iacute;deos para empresas, redes sociais e tr&aacute;fego pago." />
+  <meta property="og:url" content="https://rogerionobrevideo-ux.github.io/nobre-marketing/opcao-2/" />
+  <meta property="og:image" content="https://rogerionobrevideo-ux.github.io/nobre-marketing/opcao-2/assets/hero-person-notebook-phone.webp" />
+  <meta property="og:image:alt" content="Nobre Marketing - produ&ccedil;&atilde;o de v&iacute;deos para empresas" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Nobre Marketing | V&iacute;deos que geram vendas" />
+  <meta name="twitter:description" content="Produ&ccedil;&atilde;o premium de v&iacute;deos para empresas, redes sociais e tr&aacute;fego pago." />
+  <meta name="twitter:image" content="https://rogerionobrevideo-ux.github.io/nobre-marketing/opcao-2/assets/hero-person-notebook-phone.webp" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="dns-prefetch" href="https://player.vimeo.com">
   <link rel="dns-prefetch" href="https://f.vimeocdn.com">
-  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "Nobre Marketing",
+      "description": "Producao de videos para empresas, redes sociais e trafego pago.",
+      "url": "https://rogerionobrevideo-ux.github.io/nobre-marketing/opcao-2/",
+      "telephone": "+55-35-99905-1050",
+      "areaServed": "BR",
+      "sameAs": ["https://www.instagram.com/nobremkt.oficial"]
+    }
+  </script>
   <style>
     :root {
       --black: #050505;
@@ -27,7 +54,7 @@
       --font: Inter, "Segoe UI", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
       --font-display: Inter, "Segoe UI", ui-sans-serif, system-ui, sans-serif;
       --font-strong: Inter, "Segoe UI Semibold", "Segoe UI", ui-sans-serif, system-ui, sans-serif;
-      --font-impact: "Archivo Black", "Arial Black", "Plus Jakarta Sans", sans-serif;
+      --font-impact: "Archivo Black", "Arial Black", sans-serif;
       --hero-image-size: auto 98%;
       --hero-image-size-mobile: 132% auto;
     }
@@ -54,6 +81,11 @@
 
     body.modal-open {
       overflow: hidden;
+    }
+
+    :focus-visible {
+      outline: 3px solid var(--white);
+      outline-offset: 4px;
     }
 
     a {
@@ -887,11 +919,19 @@
       overflow-x: auto;
       padding: 2px 0 16px;
       margin-bottom: 8px;
-      scrollbar-width: thin;
+      scrollbar-width: none;
+      scroll-snap-type: x proximity;
+      overscroll-behavior-inline: contain;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .filters::-webkit-scrollbar {
+      display: none;
     }
 
     .filter-btn {
       flex: 0 0 auto;
+      scroll-snap-align: start;
       min-height: 42px;
       padding: 0 15px;
       border: 1px solid rgba(255, 255, 255, 0.15);
@@ -937,9 +977,14 @@
       aspect-ratio: 9 / 16;
       position: relative;
       overflow: hidden;
-      background: var(--thumb-bg);
-      background-size: cover;
-      background-position: center;
+      background: #09090b;
+    }
+
+    .reel-thumb > img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
     }
 
     .reel-thumb::before {
@@ -1641,6 +1686,25 @@
         gap: 16px;
       }
 
+      .filters {
+        scrollbar-width: thin;
+        scrollbar-color: rgba(229, 9, 20, 0.72) transparent;
+      }
+
+      .filters::-webkit-scrollbar {
+        display: block;
+        height: 5px;
+      }
+
+      .filters::-webkit-scrollbar-track {
+        background: transparent;
+      }
+
+      .filters::-webkit-scrollbar-thumb {
+        border-radius: 999px;
+        background: rgba(229, 9, 20, 0.72);
+      }
+
       .hero-grid {
         grid-template-columns: minmax(0, 1.08fr) minmax(420px, 0.92fr);
       }
@@ -1679,7 +1743,7 @@
     }
   </style>
 </head>
-<body>
+<body id="top">
   <div class="page-shell">
     <header class="site-header">
       <nav class="container nav" aria-label="Menu principal">
@@ -1723,11 +1787,6 @@
               <span><b class="check">&check;</b><span><strong class="benefit-title">V&iacute;deos para vendas</strong><small class="benefit-text">e tr&aacute;fego pago</small></span></span>
               <span><b class="check">&check;</b><span><strong class="benefit-title">Produ&ccedil;&atilde;o criativa</strong><small class="benefit-text">e profissional</small></span></span>
               <span><b class="check">&check;</b><span><strong class="benefit-title">Entrega r&aacute;pida</strong><small class="benefit-text">e com qualidade</small></span></span>
-            </div>
-          </div>
-          <div class="hero-panel" aria-hidden="true">
-            <div class="hero-visual-frame">
-              <img src="assets/hero-person-notebook-phone.webp" alt="" decoding="async" fetchpriority="high" />
             </div>
           </div>
         </div>
@@ -1781,7 +1840,7 @@
               <div class="format-body">
                 <h3>Apresentadores</h3>
                 <p>Influencer, UGC, pessoa real com IA e outros v&iacute;deos apresentados para a c&acirc;mera.</p>
-                <button class="text-link js-format-watch">Ver exemplos <span>&rarr;</span></button>
+                <button class="text-link js-format-watch" type="button">Ver exemplos <span>&rarr;</span></button>
               </div>
             </article>
             <article class="glass-card format-card reveal" data-name="Anima&ccedil;&otilde;es" data-format="Anima&ccedil;&otilde;es" data-segment="Personagens, mascotes e universos criados em anima&ccedil;&atilde;o" data-video-labels="3D Premium|3D Premium|3D Premium|Mascote|Mascote|Conte&uacute;do Viral|Conte&uacute;do Viral" data-videos="https://vimeo.com/1204589721|https://vimeo.com/1205071540|https://vimeo.com/1205071916|https://vimeo.com/1204588657|https://vimeo.com/1204589243|https://vimeo.com/1204598813|https://vimeo.com/1204592213">
@@ -1789,7 +1848,7 @@
               <div class="format-body">
                 <h3>Anima&ccedil;&otilde;es</h3>
                 <p>3D Premium, mascotes e personagens animados criados para destacar sua marca.</p>
-                <button class="text-link js-format-watch">Ver exemplos <span>&rarr;</span></button>
+                <button class="text-link js-format-watch" type="button">Ver exemplos <span>&rarr;</span></button>
               </div>
             </article>
             <article class="glass-card format-card reveal" data-name="Cenas Reais" data-format="Cenas Reais" data-segment="Cenas cinematogr&aacute;ficas e narrativas visuais" data-video-labels="Storytelling|POV" data-videos="https://vimeo.com/1205070941|https://vimeo.com/1204600131">
@@ -1797,7 +1856,7 @@
               <div class="format-body">
                 <h3>Cenas Reais</h3>
                 <p>Comerciais, storytelling e sequ&ecirc;ncias cinematogr&aacute;ficas constru&iacute;das com imagens reais.</p>
-                <button class="text-link js-format-watch">Ver exemplos <span>&rarr;</span></button>
+                <button class="text-link js-format-watch" type="button">Ver exemplos <span>&rarr;</span></button>
               </div>
             </article>
             <article class="glass-card format-card reveal" data-name="Explicativos" data-format="Explicativos" data-segment="Produtos, servi&ccedil;os e processos explicados com clareza" data-video-labels="Whiteboard|VSL|VSL" data-videos="https://vimeo.com/1204594752|https://vimeo.com/1205070219|https://vimeo.com/1204591130">
@@ -1805,7 +1864,7 @@
               <div class="format-body">
                 <h3>Explicativos</h3>
                 <p>Whiteboard e formatos que tornam produtos, servi&ccedil;os e processos f&aacute;ceis de entender.</p>
-                <button class="text-link js-format-watch">Ver exemplos <span>&rarr;</span></button>
+                <button class="text-link js-format-watch" type="button">Ver exemplos <span>&rarr;</span></button>
               </div>
             </article>
           </div>
@@ -1818,192 +1877,192 @@
             <span class="eyebrow">Portf&oacute;lio</span>
             <h2 id="portfolio-title">Exemplos reais produzidos pela Nobre Marketing</h2>
           </div>
-          <div class="filters reveal" aria-label="Filtros do portfolio">
-            <button class="filter-btn is-active" data-filter="Sa&uacute;de e Est&eacute;tica">&#127973; Sa&uacute;de e Est&eacute;tica</button>
-            <button class="filter-btn" data-filter="Pet">&#128062; Pet</button>
-            <button class="filter-btn" data-filter="Alimenta&ccedil;&atilde;o">&#127828; Alimenta&ccedil;&atilde;o</button>
-            <button class="filter-btn" data-filter="Hotelaria">&#127976; Hotelaria</button>
-            <button class="filter-btn" data-filter="Imobili&aacute;rio">&#127968; Imobili&aacute;rio</button>
-            <button class="filter-btn" data-filter="Financeiro e Jur&iacute;dico">&#128188; Financeiro e Jur&iacute;dico</button>
-            <button class="filter-btn" data-filter="Tecnologia e Telecom">&#128225; Tecnologia e Telecom</button>
-            <button class="filter-btn" data-filter="Automotivo">&#128663; Automotivo</button>
-            <button class="filter-btn" data-filter="Constru&ccedil;&atilde;o">&#127959;&#65039; Constru&ccedil;&atilde;o</button>
-            <button class="filter-btn" data-filter="Servi&ccedil;os T&eacute;cnicos">&#128736;&#65039; Servi&ccedil;os T&eacute;cnicos</button>
-            <button class="filter-btn" data-filter="Com&eacute;rcio">&#128722; Com&eacute;rcio</button>
-            <button class="filter-btn" data-filter="Moda e Acess&oacute;rios">&#128087; Moda e Acess&oacute;rios</button>
-            <button class="filter-btn" data-filter="Ind&uacute;stria">&#127981; Ind&uacute;stria</button>
-            <button class="filter-btn" data-filter="Agroneg&oacute;cio">&#127806; Agroneg&oacute;cio</button>
-            <button class="filter-btn" data-filter="Energia Solar">&#9728;&#65039; Energia Solar</button>
-            <button class="filter-btn" data-filter="Transportes e Log&iacute;stica">&#128666; Transportes e Log&iacute;stica</button>
-            <button class="filter-btn" data-filter="Educa&ccedil;&atilde;o">&#127891; Educa&ccedil;&atilde;o</button>
-            <button class="filter-btn" data-filter="Academias e Esportes">&#127947;&#65039; Academias e Esportes</button>
-            <button class="filter-btn" data-filter="Eventos">&#127881; Eventos</button>
-            <button class="filter-btn" data-filter="Outros">&#10133; Outros</button>
+          <div class="filters reveal" role="navigation" aria-label="Navega&ccedil;&atilde;o pelos segmentos">
+            <button type="button" class="filter-btn is-active" data-filter="Sa&uacute;de e Est&eacute;tica" aria-current="true">&#127973; Sa&uacute;de e Est&eacute;tica</button>
+            <button type="button" class="filter-btn" data-filter="Pet">&#128062; Pet</button>
+            <button type="button" class="filter-btn" data-filter="Alimenta&ccedil;&atilde;o">&#127828; Alimenta&ccedil;&atilde;o</button>
+            <button type="button" class="filter-btn" data-filter="Hotelaria">&#127976; Hotelaria</button>
+            <button type="button" class="filter-btn" data-filter="Imobili&aacute;rio">&#127968; Imobili&aacute;rio</button>
+            <button type="button" class="filter-btn" data-filter="Financeiro e Jur&iacute;dico">&#128188; Financeiro e Jur&iacute;dico</button>
+            <button type="button" class="filter-btn" data-filter="Tecnologia e Telecom">&#128225; Tecnologia e Telecom</button>
+            <button type="button" class="filter-btn" data-filter="Automotivo">&#128663; Automotivo</button>
+            <button type="button" class="filter-btn" data-filter="Constru&ccedil;&atilde;o">&#127959;&#65039; Constru&ccedil;&atilde;o</button>
+            <button type="button" class="filter-btn" data-filter="Servi&ccedil;os T&eacute;cnicos">&#128736;&#65039; Servi&ccedil;os T&eacute;cnicos</button>
+            <button type="button" class="filter-btn" data-filter="Com&eacute;rcio">&#128722; Com&eacute;rcio</button>
+            <button type="button" class="filter-btn" data-filter="Moda e Acess&oacute;rios">&#128087; Moda e Acess&oacute;rios</button>
+            <button type="button" class="filter-btn" data-filter="Ind&uacute;stria">&#127981; Ind&uacute;stria</button>
+            <button type="button" class="filter-btn" data-filter="Agroneg&oacute;cio">&#127806; Agroneg&oacute;cio</button>
+            <button type="button" class="filter-btn" data-filter="Energia Solar">&#9728;&#65039; Energia Solar</button>
+            <button type="button" class="filter-btn" data-filter="Transportes e Log&iacute;stica">&#128666; Transportes e Log&iacute;stica</button>
+            <button type="button" class="filter-btn" data-filter="Educa&ccedil;&atilde;o">&#127891; Educa&ccedil;&atilde;o</button>
+            <button type="button" class="filter-btn" data-filter="Academias e Esportes">&#127947;&#65039; Academias e Esportes</button>
+            <button type="button" class="filter-btn" data-filter="Eventos">&#127881; Eventos</button>
+            <button type="button" class="filter-btn" data-filter="Outros">&#10133; Outros</button>
           </div>
           <div class="portfolio-grid" id="portfolioGrid">
             <!--
               EDICAO DOS VIDEOS:
               Para cada card abaixo, altere:
-              data-thumbnail/css --thumb-bg = thumbnail vertical do video
+              img src/alt = capa vertical e descricao da imagem
               data-name = nome do projeto
               data-format = formato
               data-segment = segmento
               data-videos = um ou mais links separados por |
             -->
-            <article class="glass-card portfolio-card reveal" data-format="Sa&uacute;de e Est&eacute;tica" data-name="Sa&uacute;de e Est&eacute;tica" data-segment="Cl&iacute;nicas, sa&uacute;de, beleza e bem-estar" data-videos="https://vimeo.com/1204587935?fl=tl&amp;fe=ec|https://vimeo.com/1204588657?fl=tl&amp;fe=ec" data-lazy-style="--thumb-bg: url('assets/capas-segmentos/saude.webp') center / cover;">
-              <div class="reel-thumb"><span class="play-chip" aria-hidden="true"></span></div>
+            <article class="glass-card portfolio-card reveal" data-format="Sa&uacute;de e Est&eacute;tica" data-name="Sa&uacute;de e Est&eacute;tica" data-segment="Cl&iacute;nicas, sa&uacute;de, beleza e bem-estar" data-videos="https://vimeo.com/1204587935?fl=tl&amp;fe=ec|https://vimeo.com/1204588657?fl=tl&amp;fe=ec">
+              <div class="reel-thumb"><img src="assets/capas-segmentos/saude.webp" alt="Capa do segmento Sa&uacute;de e Est&eacute;tica" width="720" height="1280" loading="lazy" decoding="async" /><span class="play-chip" aria-hidden="true"></span></div>
               <div class="portfolio-info">
                 <div class="project-name">Sa&uacute;de e Est&eacute;tica</div>
                 <div class="project-meta">Cl&iacute;nicas &middot; Beleza &middot; Bem-estar</div>
                 <button class="watch-btn js-watch">Assistir v&iacute;deo</button>
               </div>
             </article>
-            <article class="glass-card portfolio-card reveal" data-format="Alimenta&ccedil;&atilde;o" data-name="Alimenta&ccedil;&atilde;o" data-segment="Restaurantes, lanchonetes e sorveterias" data-videos="https://vimeo.com/1204589243?fl=tl&amp;fe=ec|https://vimeo.com/1205070941?share=copy&amp;fl=sv&amp;fe=ci" data-lazy-style="--thumb-bg: url('assets/capas-segmentos/alimentacao.webp') center / cover;">
-              <div class="reel-thumb"><span class="play-chip" aria-hidden="true"></span></div>
+            <article class="glass-card portfolio-card reveal" data-format="Alimenta&ccedil;&atilde;o" data-name="Alimenta&ccedil;&atilde;o" data-segment="Restaurantes, lanchonetes e sorveterias" data-videos="https://vimeo.com/1204589243?fl=tl&amp;fe=ec|https://vimeo.com/1205070941?share=copy&amp;fl=sv&amp;fe=ci">
+              <div class="reel-thumb"><img src="assets/capas-segmentos/alimentacao.webp" alt="Capa do segmento Alimenta&ccedil;&atilde;o" width="720" height="1280" loading="lazy" decoding="async" /><span class="play-chip" aria-hidden="true"></span></div>
               <div class="portfolio-info">
                 <div class="project-name">Alimenta&ccedil;&atilde;o</div>
                 <div class="project-meta">Restaurantes &middot; Lanchonetes &middot; Sorveterias</div>
                 <button class="watch-btn js-watch">Assistir v&iacute;deo</button>
               </div>
             </article>
-            <article class="glass-card portfolio-card reveal" data-format="Hotelaria" data-name="Hotelaria" data-segment="Hot&eacute;is, flats e experi&ecirc;ncias de hospedagem" data-videos="https://vimeo.com/1204591378?fl=tl&amp;fe=ec|https://vimeo.com/1205070219?share=copy&amp;fl=sv&amp;fe=ci" data-lazy-style="--thumb-bg: url('assets/capas-segmentos/hotelaria.webp') center / cover;">
-              <div class="reel-thumb"><span class="play-chip" aria-hidden="true"></span></div>
+            <article class="glass-card portfolio-card reveal" data-format="Hotelaria" data-name="Hotelaria" data-segment="Hot&eacute;is, flats e experi&ecirc;ncias de hospedagem" data-videos="https://vimeo.com/1204591378?fl=tl&amp;fe=ec|https://vimeo.com/1205070219?share=copy&amp;fl=sv&amp;fe=ci">
+              <div class="reel-thumb"><img src="assets/capas-segmentos/hotelaria.webp" alt="Capa do segmento Hotelaria" width="720" height="1280" loading="lazy" decoding="async" /><span class="play-chip" aria-hidden="true"></span></div>
               <div class="portfolio-info">
                 <div class="project-name">Hotelaria</div>
                 <div class="project-meta">Hot&eacute;is &middot; Flats &middot; Hospedagem</div>
                 <button class="watch-btn js-watch">Assistir v&iacute;deo</button>
               </div>
             </article>
-            <article class="glass-card portfolio-card reveal" data-format="Imobili&aacute;rio" data-name="Imobili&aacute;rio" data-segment="Im&oacute;veis, corretores e empreendimentos" data-videos="https://vimeo.com/1204591130?fl=tl&amp;fe=ec" data-lazy-style="--thumb-bg: url('assets/capas-segmentos/imobiliario.webp') center / cover;">
-              <div class="reel-thumb"><span class="play-chip" aria-hidden="true"></span></div>
+            <article class="glass-card portfolio-card reveal" data-format="Imobili&aacute;rio" data-name="Imobili&aacute;rio" data-segment="Im&oacute;veis, corretores e empreendimentos" data-videos="https://vimeo.com/1204591130?fl=tl&amp;fe=ec">
+              <div class="reel-thumb"><img src="assets/capas-segmentos/imobiliario.webp" alt="Capa do segmento Imobili&aacute;rio" width="720" height="1280" loading="lazy" decoding="async" /><span class="play-chip" aria-hidden="true"></span></div>
               <div class="portfolio-info">
                 <div class="project-name">Imobili&aacute;rio</div>
                 <div class="project-meta">Im&oacute;veis &middot; Corretores &middot; Empreendimentos</div>
                 <button class="watch-btn js-watch">Assistir v&iacute;deo</button>
               </div>
             </article>
-            <article class="glass-card portfolio-card reveal" data-format="Financeiro e Jur&iacute;dico" data-name="Financeiro e Jur&iacute;dico" data-segment="Finan&ccedil;as, contabilidade e advocacia" data-videos="https://vimeo.com/1205070219?share=copy&amp;fl=sv&amp;fe=ci" data-lazy-style="--thumb-bg: url('assets/capas-segmentos/financeiro-juridico.webp') center / cover;">
-              <div class="reel-thumb"><span class="play-chip" aria-hidden="true"></span></div>
+            <article class="glass-card portfolio-card reveal" data-format="Financeiro e Jur&iacute;dico" data-name="Financeiro e Jur&iacute;dico" data-segment="Finan&ccedil;as, contabilidade e advocacia" data-videos="https://vimeo.com/1205070219?share=copy&amp;fl=sv&amp;fe=ci">
+              <div class="reel-thumb"><img src="assets/capas-segmentos/financeiro-juridico.webp" alt="Capa do segmento Financeiro e Jur&iacute;dico" width="720" height="1280" loading="lazy" decoding="async" /><span class="play-chip" aria-hidden="true"></span></div>
               <div class="portfolio-info">
                 <div class="project-name">Financeiro e Jur&iacute;dico</div>
                 <div class="project-meta">Finan&ccedil;as &middot; Contabilidade &middot; Advocacia</div>
                 <button class="watch-btn js-watch">Assistir v&iacute;deo</button>
               </div>
             </article>
-            <article class="glass-card portfolio-card reveal" data-format="Automotivo" data-name="Automotivo" data-segment="Ve&iacute;culos, tecnologia e vendas" data-videos="https://vimeo.com/1204594752?fl=tl&amp;fe=ec|https://vimeo.com/1205071916?share=copy&amp;fl=sv&amp;fe=ci" data-lazy-style="--thumb-bg: url('assets/capas-segmentos/automotivo.webp') center / cover;">
-              <div class="reel-thumb"><span class="play-chip" aria-hidden="true"></span></div>
+            <article class="glass-card portfolio-card reveal" data-format="Automotivo" data-name="Automotivo" data-segment="Ve&iacute;culos, tecnologia e vendas" data-videos="https://vimeo.com/1204594752?fl=tl&amp;fe=ec|https://vimeo.com/1205071916?share=copy&amp;fl=sv&amp;fe=ci">
+              <div class="reel-thumb"><img src="assets/capas-segmentos/automotivo.webp" alt="Capa do segmento Automotivo" width="720" height="1280" loading="lazy" decoding="async" /><span class="play-chip" aria-hidden="true"></span></div>
               <div class="portfolio-info">
                 <div class="project-name">Automotivo</div>
                 <div class="project-meta">Ve&iacute;culos &middot; Tecnologia &middot; Vendas</div>
                 <button class="watch-btn js-watch">Assistir v&iacute;deo</button>
               </div>
             </article>
-            <article class="glass-card portfolio-card reveal" data-format="Constru&ccedil;&atilde;o" data-name="Constru&ccedil;&atilde;o" data-segment="Obras, construtoras e solu&ccedil;&otilde;es para constru&ccedil;&atilde;o" data-videos="https://vimeo.com/1204599510?fl=tl&amp;fe=ec|https://vimeo.com/1204592213?fl=tl&amp;fe=ec" data-lazy-style="--thumb-bg: url('assets/capas-segmentos/construcao.webp') center / cover;">
-              <div class="reel-thumb"><span class="play-chip" aria-hidden="true"></span></div>
+            <article class="glass-card portfolio-card reveal" data-format="Constru&ccedil;&atilde;o" data-name="Constru&ccedil;&atilde;o" data-segment="Obras, construtoras e solu&ccedil;&otilde;es para constru&ccedil;&atilde;o" data-videos="https://vimeo.com/1204599510?fl=tl&amp;fe=ec|https://vimeo.com/1204592213?fl=tl&amp;fe=ec">
+              <div class="reel-thumb"><img src="assets/capas-segmentos/construcao.webp" alt="Capa do segmento Constru&ccedil;&atilde;o" width="720" height="1280" loading="lazy" decoding="async" /><span class="play-chip" aria-hidden="true"></span></div>
               <div class="portfolio-info">
                 <div class="project-name">Constru&ccedil;&atilde;o</div>
                 <div class="project-meta">Obras &middot; Construtoras &middot; Vidros</div>
                 <button class="watch-btn js-watch">Assistir v&iacute;deo</button>
               </div>
             </article>
-            <article class="glass-card portfolio-card reveal" data-format="Servi&ccedil;os T&eacute;cnicos" data-name="Servi&ccedil;os T&eacute;cnicos" data-segment="Eletricistas, encanadores e profissionais de obra" data-videos="https://vimeo.com/1204589721?fl=tl&amp;fe=ec|https://vimeo.com/1205071264?share=copy&amp;fl=sv&amp;fe=ci" data-lazy-style="--thumb-bg: url('assets/capas-segmentos/servicos.webp') center / cover;">
-              <div class="reel-thumb"><span class="play-chip" aria-hidden="true"></span></div>
+            <article class="glass-card portfolio-card reveal" data-format="Servi&ccedil;os T&eacute;cnicos" data-name="Servi&ccedil;os T&eacute;cnicos" data-segment="Eletricistas, encanadores e profissionais de obra" data-videos="https://vimeo.com/1204589721?fl=tl&amp;fe=ec|https://vimeo.com/1205071264?share=copy&amp;fl=sv&amp;fe=ci">
+              <div class="reel-thumb"><img src="assets/capas-segmentos/servicos.webp" alt="Capa do segmento Servi&ccedil;os T&eacute;cnicos" width="720" height="1280" loading="lazy" decoding="async" /><span class="play-chip" aria-hidden="true"></span></div>
               <div class="portfolio-info">
                 <div class="project-name">Servi&ccedil;os T&eacute;cnicos</div>
                 <div class="project-meta">Eletricistas &middot; Encanadores &middot; Obras</div>
                 <button class="watch-btn js-watch">Assistir v&iacute;deo</button>
               </div>
             </article>
-            <article class="glass-card portfolio-card reveal" data-format="Com&eacute;rcio" data-name="Com&eacute;rcio" data-segment="Lojas, beleza e varejo" data-videos="https://vimeo.com/1204598813?fl=tl&amp;fe=ec|https://vimeo.com/1205069965?fl=tl&amp;fe=ec" data-lazy-style="--thumb-bg: url('assets/capas-segmentos/comercio.webp') center / cover;">
-              <div class="reel-thumb"><span class="play-chip" aria-hidden="true"></span></div>
+            <article class="glass-card portfolio-card reveal" data-format="Com&eacute;rcio" data-name="Com&eacute;rcio" data-segment="Lojas, beleza e varejo" data-videos="https://vimeo.com/1204598813?fl=tl&amp;fe=ec|https://vimeo.com/1205069965?fl=tl&amp;fe=ec">
+              <div class="reel-thumb"><img src="assets/capas-segmentos/comercio.webp" alt="Capa do segmento Com&eacute;rcio" width="720" height="1280" loading="lazy" decoding="async" /><span class="play-chip" aria-hidden="true"></span></div>
               <div class="portfolio-info">
                 <div class="project-name">Com&eacute;rcio</div>
                 <div class="project-meta">Lojas &middot; Beleza &middot; Varejo</div>
                 <button class="watch-btn js-watch">Assistir v&iacute;deo</button>
               </div>
             </article>
-            <article class="glass-card portfolio-card reveal" data-format="Ind&uacute;stria" data-name="Ind&uacute;stria" data-segment="Produ&ccedil;&atilde;o, tecnologia e processos" data-videos="https://vimeo.com/1204592213?fl=tl&amp;fe=ec" data-lazy-style="--thumb-bg: url('assets/capas-segmentos/industria.webp') center / cover;">
-              <div class="reel-thumb"><span class="play-chip" aria-hidden="true"></span></div>
+            <article class="glass-card portfolio-card reveal" data-format="Ind&uacute;stria" data-name="Ind&uacute;stria" data-segment="Produ&ccedil;&atilde;o, tecnologia e processos" data-videos="https://vimeo.com/1204592213?fl=tl&amp;fe=ec">
+              <div class="reel-thumb"><img src="assets/capas-segmentos/industria.webp" alt="Capa do segmento Ind&uacute;stria" width="720" height="1280" loading="lazy" decoding="async" /><span class="play-chip" aria-hidden="true"></span></div>
               <div class="portfolio-info">
                 <div class="project-name">Ind&uacute;stria</div>
                 <div class="project-meta">Produ&ccedil;&atilde;o &middot; Tecnologia &middot; Processos</div>
                 <button class="watch-btn js-watch">Assistir v&iacute;deo</button>
               </div>
             </article>
-            <article class="glass-card portfolio-card reveal" data-format="Agroneg&oacute;cio" data-name="Agroneg&oacute;cio" data-segment="Produtores, tecnologia e produ&ccedil;&atilde;o rural" data-videos="https://vimeo.com/1205071540?share=copy&amp;fl=sv&amp;fe=ci" data-lazy-style="--thumb-bg: url('assets/capas-segmentos/agronegocio.webp') center / cover;">
-              <div class="reel-thumb"><span class="play-chip" aria-hidden="true"></span></div>
+            <article class="glass-card portfolio-card reveal" data-format="Agroneg&oacute;cio" data-name="Agroneg&oacute;cio" data-segment="Produtores, tecnologia e produ&ccedil;&atilde;o rural" data-videos="https://vimeo.com/1205071540?share=copy&amp;fl=sv&amp;fe=ci">
+              <div class="reel-thumb"><img src="assets/capas-segmentos/agronegocio.webp" alt="Capa do segmento Agroneg&oacute;cio" width="720" height="1280" loading="lazy" decoding="async" /><span class="play-chip" aria-hidden="true"></span></div>
               <div class="portfolio-info">
                 <div class="project-name">Agroneg&oacute;cio</div>
                 <div class="project-meta">Produtores &middot; Tecnologia &middot; Produ&ccedil;&atilde;o rural</div>
                 <button class="watch-btn js-watch">Assistir v&iacute;deo</button>
               </div>
             </article>
-            <article class="glass-card portfolio-card reveal" data-format="Educa&ccedil;&atilde;o" data-name="Educa&ccedil;&atilde;o" data-segment="Cursos, escolas e conte&uacute;do educacional" data-videos="https://vimeo.com/1204594752?fl=tl&amp;fe=ec" data-lazy-style="--thumb-bg: url('assets/capas-segmentos/educacao.webp') center / cover;">
-              <div class="reel-thumb"><span class="play-chip" aria-hidden="true"></span></div>
+            <article class="glass-card portfolio-card reveal" data-format="Educa&ccedil;&atilde;o" data-name="Educa&ccedil;&atilde;o" data-segment="Cursos, escolas e conte&uacute;do educacional" data-videos="https://vimeo.com/1204594752?fl=tl&amp;fe=ec">
+              <div class="reel-thumb"><img src="assets/capas-segmentos/educacao.webp" alt="Capa do segmento Educa&ccedil;&atilde;o" width="720" height="1280" loading="lazy" decoding="async" /><span class="play-chip" aria-hidden="true"></span></div>
               <div class="portfolio-info">
                 <div class="project-name">Educa&ccedil;&atilde;o</div>
                 <div class="project-meta">Cursos &middot; Escolas &middot; Treinamentos</div>
                 <button class="watch-btn js-watch">Assistir v&iacute;deo</button>
               </div>
             </article>
-            <article class="glass-card portfolio-card reveal" data-format="Eventos" data-name="Eventos" data-segment="Casamentos, festas e eventos corporativos" data-videos="https://vimeo.com/1204600131?fl=tl&amp;fe=ec|https://vimeo.com/1205071540?share=copy&amp;fl=sv&amp;fe=ci" data-lazy-style="--thumb-bg: url('assets/capas-segmentos/eventos.webp') center / cover;">
-              <div class="reel-thumb"><span class="play-chip" aria-hidden="true"></span></div>
+            <article class="glass-card portfolio-card reveal" data-format="Eventos" data-name="Eventos" data-segment="Casamentos, festas e eventos corporativos" data-videos="https://vimeo.com/1204600131?fl=tl&amp;fe=ec|https://vimeo.com/1205071540?share=copy&amp;fl=sv&amp;fe=ci">
+              <div class="reel-thumb"><img src="assets/capas-segmentos/eventos.webp" alt="Capa do segmento Eventos" width="720" height="1280" loading="lazy" decoding="async" /><span class="play-chip" aria-hidden="true"></span></div>
               <div class="portfolio-info">
                 <div class="project-name">Eventos</div>
                 <div class="project-meta">Casamentos &middot; Festas &middot; Eventos corporativos</div>
                 <button class="watch-btn js-watch">Assistir v&iacute;deo</button>
               </div>
             </article>
-            <article class="glass-card portfolio-card reveal" data-format="Tecnologia e Telecom" data-name="Tecnologia e Telecom" data-segment="Softwares, conectividade e empresas digitais" data-videos="https://vimeo.com/1205070219?share=copy&amp;fl=sv&amp;fe=ci" data-lazy-style="--thumb-bg: url('assets/capas-segmentos/tecnologia-telecom.webp') center / cover;">
-              <div class="reel-thumb"><span class="play-chip" aria-hidden="true"></span></div>
+            <article class="glass-card portfolio-card reveal" data-format="Tecnologia e Telecom" data-name="Tecnologia e Telecom" data-segment="Softwares, conectividade e empresas digitais" data-videos="https://vimeo.com/1205070219?share=copy&amp;fl=sv&amp;fe=ci">
+              <div class="reel-thumb"><img src="assets/capas-segmentos/tecnologia-telecom.webp" alt="Capa do segmento Tecnologia e Telecom" width="720" height="1280" loading="lazy" decoding="async" /><span class="play-chip" aria-hidden="true"></span></div>
               <div class="portfolio-info">
                 <div class="project-name">Tecnologia e Telecom</div>
                 <div class="project-meta">Softwares &middot; Conectividade &middot; Digital</div>
                 <button class="watch-btn js-watch">Assistir v&iacute;deo</button>
               </div>
             </article>
-            <article class="glass-card portfolio-card reveal" data-format="Moda e Acess&oacute;rios" data-name="Moda e Acess&oacute;rios" data-segment="Moda, cal&ccedil;ados e acess&oacute;rios" data-videos="https://vimeo.com/1204591378?fl=tl&amp;fe=ec" data-lazy-style="--thumb-bg: url('assets/capas-segmentos/moda-acessorios.webp') center / cover;">
-              <div class="reel-thumb"><span class="play-chip" aria-hidden="true"></span></div>
+            <article class="glass-card portfolio-card reveal" data-format="Moda e Acess&oacute;rios" data-name="Moda e Acess&oacute;rios" data-segment="Moda, cal&ccedil;ados e acess&oacute;rios" data-videos="https://vimeo.com/1204591378?fl=tl&amp;fe=ec">
+              <div class="reel-thumb"><img src="assets/capas-segmentos/moda-acessorios.webp" alt="Capa do segmento Moda e Acess&oacute;rios" width="720" height="1280" loading="lazy" decoding="async" /><span class="play-chip" aria-hidden="true"></span></div>
               <div class="portfolio-info">
                 <div class="project-name">Moda e Acess&oacute;rios</div>
                 <div class="project-meta">Moda &middot; Cal&ccedil;ados &middot; Acess&oacute;rios</div>
                 <button class="watch-btn js-watch">Assistir v&iacute;deo</button>
               </div>
             </article>
-            <article class="glass-card portfolio-card reveal" data-format="Academias e Esportes" data-name="Academias e Esportes" data-segment="Academias, personal trainers e esportes" data-videos="https://vimeo.com/1204599510?fl=tl&amp;fe=ec" data-lazy-style="--thumb-bg: url('assets/capas-segmentos/academias-esportes.webp') center / cover;">
-              <div class="reel-thumb"><span class="play-chip" aria-hidden="true"></span></div>
+            <article class="glass-card portfolio-card reveal" data-format="Academias e Esportes" data-name="Academias e Esportes" data-segment="Academias, personal trainers e esportes" data-videos="https://vimeo.com/1204599510?fl=tl&amp;fe=ec">
+              <div class="reel-thumb"><img src="assets/capas-segmentos/academias-esportes.webp" alt="Capa do segmento Academias e Esportes" width="720" height="1280" loading="lazy" decoding="async" /><span class="play-chip" aria-hidden="true"></span></div>
               <div class="portfolio-info">
                 <div class="project-name">Academias e Esportes</div>
                 <div class="project-meta">Academias &middot; Personal trainers &middot; Esportes</div>
                 <button class="watch-btn js-watch">Assistir v&iacute;deo</button>
               </div>
             </article>
-            <article class="glass-card portfolio-card reveal" data-format="Pet" data-name="Pet" data-segment="Cl&iacute;nicas veterin&aacute;rias e pet shops" data-videos="https://vimeo.com/1204598813?fl=tl&amp;fe=ec" data-lazy-style="--thumb-bg: url('assets/capas-segmentos/pet.webp') center / cover;">
-              <div class="reel-thumb"><span class="play-chip" aria-hidden="true"></span></div>
+            <article class="glass-card portfolio-card reveal" data-format="Pet" data-name="Pet" data-segment="Cl&iacute;nicas veterin&aacute;rias e pet shops" data-videos="https://vimeo.com/1204598813?fl=tl&amp;fe=ec">
+              <div class="reel-thumb"><img src="assets/capas-segmentos/pet.webp" alt="Capa do segmento Pet" width="720" height="1280" loading="lazy" decoding="async" /><span class="play-chip" aria-hidden="true"></span></div>
               <div class="portfolio-info">
                 <div class="project-name">Pet</div>
                 <div class="project-meta">Veterin&aacute;rias &middot; Pet shops &middot; Cuidados</div>
                 <button class="watch-btn js-watch">Assistir v&iacute;deo</button>
               </div>
             </article>
-            <article class="glass-card portfolio-card reveal" data-format="Energia Solar" data-name="Energia Solar" data-segment="Energia, sustentabilidade e tecnologia" data-videos="https://vimeo.com/1205071916?share=copy&amp;fl=sv&amp;fe=ci" data-lazy-style="--thumb-bg: url('assets/capas-segmentos/energia-solar.webp') center / cover;">
-              <div class="reel-thumb"><span class="play-chip" aria-hidden="true"></span></div>
+            <article class="glass-card portfolio-card reveal" data-format="Energia Solar" data-name="Energia Solar" data-segment="Energia, sustentabilidade e tecnologia" data-videos="https://vimeo.com/1205071916?share=copy&amp;fl=sv&amp;fe=ci">
+              <div class="reel-thumb"><img src="assets/capas-segmentos/energia-solar.webp" alt="Capa do segmento Energia Solar" width="720" height="1280" loading="lazy" decoding="async" /><span class="play-chip" aria-hidden="true"></span></div>
               <div class="portfolio-info">
                 <div class="project-name">Energia Solar</div>
                 <div class="project-meta">Energia &middot; Sustentabilidade &middot; Tecnologia</div>
                 <button class="watch-btn js-watch">Assistir v&iacute;deo</button>
               </div>
             </article>
-            <article class="glass-card portfolio-card reveal" data-format="Transportes e Log&iacute;stica" data-name="Transportes e Log&iacute;stica" data-segment="Transportadoras, entregas e log&iacute;stica" data-videos="https://vimeo.com/1204600131?fl=tl&amp;fe=ec" data-lazy-style="--thumb-bg: url('assets/capas-segmentos/transportes-logistica.webp') center / cover;">
-              <div class="reel-thumb"><span class="play-chip" aria-hidden="true"></span></div>
+            <article class="glass-card portfolio-card reveal" data-format="Transportes e Log&iacute;stica" data-name="Transportes e Log&iacute;stica" data-segment="Transportadoras, entregas e log&iacute;stica" data-videos="https://vimeo.com/1204600131?fl=tl&amp;fe=ec">
+              <div class="reel-thumb"><img src="assets/capas-segmentos/transportes-logistica.webp" alt="Capa do segmento Transportes e Log&iacute;stica" width="720" height="1280" loading="lazy" decoding="async" /><span class="play-chip" aria-hidden="true"></span></div>
               <div class="portfolio-info">
                 <div class="project-name">Transportes e Log&iacute;stica</div>
                 <div class="project-meta">Transportadoras &middot; Entregas &middot; Log&iacute;stica</div>
                 <button class="watch-btn js-watch">Assistir v&iacute;deo</button>
               </div>
             </article>
-            <article class="glass-card portfolio-card reveal" data-format="Outros" data-name="Outros" data-segment="Projetos especiais e outros segmentos" data-videos="https://vimeo.com/1205071264?share=copy&amp;fl=sv&amp;fe=ci" data-lazy-style="--thumb-bg: url('assets/capas-segmentos/outros.webp') center / cover;">
-              <div class="reel-thumb"><span class="play-chip" aria-hidden="true"></span></div>
+            <article class="glass-card portfolio-card reveal" data-format="Outros" data-name="Outros" data-segment="Projetos especiais e outros segmentos" data-videos="https://vimeo.com/1205071264?share=copy&amp;fl=sv&amp;fe=ci">
+              <div class="reel-thumb"><img src="assets/capas-segmentos/outros.webp" alt="Capa do segmento Outros" width="720" height="1280" loading="lazy" decoding="async" /><span class="play-chip" aria-hidden="true"></span></div>
               <div class="portfolio-info">
                 <div class="project-name">Outros</div>
                 <div class="project-meta">Projetos especiais &middot; Outros segmentos</div>
@@ -2097,7 +2156,7 @@
           <div class="modal-title" id="modalTitle">Projeto</div>
           <div class="modal-format" id="modalMeta">Formato &middot; Segmento</div>
         </div>
-        <button class="modal-close" id="modalClose" aria-label="Fechar modal">&times;</button>
+        <button class="modal-close" id="modalClose" type="button" aria-label="Fechar modal">&times;</button>
       </div>
       <div class="video-stage">
         <div class="video-switcher" id="videoSwitcher" aria-label="Escolher exemplo de v&iacute;deo"></div>
@@ -2118,6 +2177,7 @@
     const modalMeta = document.querySelector("#modalMeta");
     const videoFrame = document.querySelector("#videoFrame");
     const videoSwitcher = document.querySelector("#videoSwitcher");
+    let lastModalTrigger = null;
 
     const lazyBackgrounds = document.querySelectorAll("[data-lazy-style]");
     const loadBackground = (element) => {
@@ -2133,7 +2193,7 @@
             backgroundObserver.unobserve(entry.target);
           }
         });
-      }, { rootMargin: "700px 0px" });
+      }, { rootMargin: "400px 0px" });
       lazyBackgrounds.forEach((element) => backgroundObserver.observe(element));
     } else {
       lazyBackgrounds.forEach(loadBackground);
@@ -2141,11 +2201,10 @@
 
     function applyFilter(filter, scrollToCard = false) {
       filterButtons.forEach((button) => {
-        button.classList.toggle("is-active", button.dataset.filter === filter);
-      });
-
-      cards.forEach((card) => {
-        card.classList.remove("is-hidden");
+        const isCurrent = button.dataset.filter === filter;
+        button.classList.toggle("is-active", isCurrent);
+        if (isCurrent) button.setAttribute("aria-current", "true");
+        else button.removeAttribute("aria-current");
       });
 
       if (scrollToCard) {
@@ -2197,18 +2256,19 @@
       videoSwitcher.dataset.current = safeIndex;
       const counter = videoSwitcher.querySelector(".video-counter");
       const label = videoLabels[safeIndex];
-      if (counter) counter.textContent = `${label ? `${label} · ` : ""}${safeIndex + 1} / ${videoUrls.length}`;
+      if (counter) counter.textContent = `${label ? `${label} \u00b7 ` : ""}${safeIndex + 1} / ${videoUrls.length}`;
     }
 
-    function openModal(card) {
+    function openModal(card, trigger) {
       const name = card.dataset.name;
       const format = card.dataset.format;
       const segment = card.dataset.segment;
       const videoUrls = (card.dataset.videos || "").split("|").filter(Boolean);
       const videoLabels = (card.dataset.videoLabels || "").split("|").filter(Boolean);
 
+      lastModalTrigger = trigger instanceof HTMLElement ? trigger : document.activeElement;
       modalTitle.textContent = name;
-      modalMeta.innerHTML = `${format} &middot; ${segment}`;
+      modalMeta.textContent = `${format} \u00b7 ${segment}`;
       videoSwitcher.innerHTML = videoUrls.length > 1 ? `
         <button class="video-arrow video-prev" type="button" aria-label="V&iacute;deo anterior">&#8249;</button>
         <span class="video-counter" aria-live="polite">${videoLabels[0] ? `${videoLabels[0]} &middot; ` : ""}1 / ${videoUrls.length}</span>
@@ -2230,19 +2290,24 @@
     }
 
     function closeModal() {
+      if (!modal.classList.contains("is-open")) return;
       modal.classList.remove("is-open");
       modal.setAttribute("aria-hidden", "true");
       document.body.classList.remove("modal-open");
       videoFrame.innerHTML = "";
       videoSwitcher.innerHTML = "";
+      lastModalTrigger?.focus();
+      lastModalTrigger = null;
     }
 
     watchButtons.forEach((button) => {
-      button.addEventListener("click", () => openModal(button.closest(".portfolio-card")));
+      button.setAttribute("aria-label", `Assistir v\u00eddeo de ${button.closest(".portfolio-card").dataset.name}`);
+      button.addEventListener("click", () => openModal(button.closest(".portfolio-card"), button));
     });
 
     formatWatchButtons.forEach((button) => {
-      button.addEventListener("click", () => openModal(button.closest(".format-card")));
+      button.setAttribute("aria-label", `Ver exemplos de ${button.closest(".format-card").dataset.name}`);
+      button.addEventListener("click", () => openModal(button.closest(".format-card"), button));
     });
 
     modalClose.addEventListener("click", closeModal);
@@ -2250,7 +2315,29 @@
       if (event.target === modal) closeModal();
     });
     document.addEventListener("keydown", (event) => {
-      if (event.key === "Escape" && modal.classList.contains("is-open")) closeModal();
+      if (!modal.classList.contains("is-open")) return;
+      if (event.key === "Escape") {
+        closeModal();
+        return;
+      }
+
+      if (event.key === "ArrowLeft") videoSwitcher.querySelector(".video-prev")?.click();
+      if (event.key === "ArrowRight") videoSwitcher.querySelector(".video-next")?.click();
+
+      if (event.key === "Tab") {
+        const focusable = [...modal.querySelectorAll('button, iframe, video[controls], [tabindex]:not([tabindex="-1"])')]
+          .filter((element) => !element.hasAttribute("disabled"));
+        if (!focusable.length) return;
+        const first = focusable[0];
+        const last = focusable[focusable.length - 1];
+        if (event.shiftKey && document.activeElement === first) {
+          event.preventDefault();
+          last.focus();
+        } else if (!event.shiftKey && document.activeElement === last) {
+          event.preventDefault();
+          first.focus();
+        }
+      }
     });
 
     const revealObserver = new IntersectionObserver((entries) => {
