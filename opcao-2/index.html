@@ -685,8 +685,8 @@
 
     .logo-grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 10px;
+      grid-template-columns: 1fr;
+      gap: 12px;
     }
 
     .logo-card,
@@ -699,13 +699,14 @@
     }
 
     .logo-card {
-      min-height: 126px;
+      min-height: 116px;
       display: grid;
-      place-items: center;
-      gap: 8px;
-      padding: 18px;
+      grid-template-columns: 112px minmax(0, 1fr);
+      align-items: center;
+      gap: 18px;
+      padding: 16px;
       color: rgba(255, 255, 255, 0.82);
-      text-align: center;
+      text-align: left;
       font-weight: 900;
       transition: transform 180ms ease, border-color 180ms ease, color 180ms ease;
       position: relative;
@@ -733,8 +734,8 @@
     }
 
     .brand-logo-stage {
-      width: min(100%, 152px);
-      height: 76px;
+      width: 112px;
+      height: 82px;
       display: grid;
       place-items: center;
       padding: 10px 16px;
@@ -767,13 +768,6 @@
       max-height: 58px;
     }
 
-    .logo-bonare .brand-logo-stage {
-      background:
-        linear-gradient(135deg, rgba(229, 9, 20, 0.9), rgba(80, 8, 14, 0.92)),
-        #111;
-      color: var(--white);
-    }
-
     .logo-emblem {
       width: 44px;
       height: 44px;
@@ -802,13 +796,25 @@
       text-transform: uppercase;
     }
 
-    .logo-card.logo-samsung .logo-main {
-      font-size: clamp(1rem, 4vw, 1.6rem);
+    .logo-copy {
+      position: relative;
+      z-index: 1;
+      min-width: 0;
     }
 
-    .logo-card.logo-bonare .logo-emblem {
-      border-radius: 8px;
-      background: linear-gradient(135deg, rgba(229, 9, 20, 0.6), rgba(255, 255, 255, 0.08));
+    .logo-name {
+      display: block;
+      margin-bottom: 7px;
+      color: #ffffff;
+      font-family: var(--font-impact);
+      font-size: 1.08rem;
+      font-weight: 400;
+      line-height: 1.08;
+      text-transform: uppercase;
+    }
+
+    .logo-card.logo-samsung .logo-main {
+      font-size: clamp(1rem, 4vw, 1.6rem);
     }
 
     .logo-card:hover {
@@ -1454,6 +1460,21 @@
         grid-template-columns: repeat(3, 1fr);
       }
 
+      .logo-card {
+        min-height: 188px;
+        grid-template-columns: 1fr;
+        justify-items: center;
+        align-content: center;
+        gap: 14px;
+        padding: 22px 18px;
+        text-align: center;
+      }
+
+      .brand-logo-stage {
+        width: min(100%, 168px);
+        height: 88px;
+      }
+
       .portfolio-grid {
         grid-template-columns: repeat(3, minmax(0, 1fr));
       }
@@ -1719,7 +1740,7 @@
       }
 
       .logo-grid {
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(3, 1fr);
       }
 
       .cta-band {
@@ -1795,33 +1816,37 @@
       <section class="section logo-strip" id="empresas" aria-labelledby="empresas-title">
         <div class="container">
           <div class="section-heading">
-            <span class="eyebrow">Autoridade</span>
-            <h2 id="empresas-title">Empresas e marcas que j&aacute; confiaram na Nobre Marketing</h2>
+            <span class="eyebrow">Autoridade comprovada</span>
+            <h2 id="empresas-title">Confian&ccedil;a de marcas que s&atilde;o refer&ecirc;ncia</h2>
+            <p>Experi&ecirc;ncia em projetos para institui&ccedil;&otilde;es, tecnologia e esporte.</p>
           </div>
           <div class="logo-grid">
             <div class="logo-card logo-marinha">
               <span class="brand-logo-stage">
                 <img class="brand-logo-img" src="assets/logo-marinha.webp" alt="Logo Marinha do Brasil" loading="lazy" decoding="async" />
               </span>
-              <span class="logo-sub">Institucional</span>
+              <span class="logo-copy">
+                <strong class="logo-name">Marinha do Brasil</strong>
+                <span class="logo-sub">Institui&ccedil;&atilde;o nacional</span>
+              </span>
             </div>
             <div class="logo-card logo-samsung">
               <span class="brand-logo-stage">
                 <img class="brand-logo-img" src="assets/logo-samsung.webp" alt="Logo Samsung" loading="lazy" decoding="async" />
               </span>
-              <span class="logo-sub">Tecnologia</span>
-            </div>
-            <div class="logo-card logo-bonare">
-              <span class="brand-logo-stage is-dark">
-                <span class="logo-main">Bonare</span>
+              <span class="logo-copy">
+                <strong class="logo-name">Samsung</strong>
+                <span class="logo-sub">Tecnologia global</span>
               </span>
-              <span class="logo-sub">Marca</span>
             </div>
             <div class="logo-card logo-real">
               <span class="brand-logo-stage">
                 <img class="brand-logo-img" src="assets/logo-real-madrid.svg" alt="Logo Real Madrid" loading="lazy" decoding="async" />
               </span>
-              <span class="logo-sub">Esporte</span>
+              <span class="logo-copy">
+                <strong class="logo-name">Real Madrid</strong>
+                <span class="logo-sub">Esporte internacional</span>
+              </span>
             </div>
           </div>
         </div>
