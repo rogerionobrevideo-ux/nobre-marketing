@@ -35,6 +35,11 @@
       "telephone": "+55-35-99905-1050",
       "taxID": "22.565.408/0001-43",
       "areaServed": "BR",
+      "founder": {
+        "@type": "Person",
+        "name": "Rog\u00e9rio Nobre",
+        "jobTitle": "Fundador"
+      },
       "sameAs": ["https://www.instagram.com/nobremkt.oficial"]
     }
   </script>
@@ -822,6 +827,152 @@
       transform: translateY(-3px);
       border-color: rgba(229, 9, 20, 0.48);
       color: var(--white);
+    }
+
+    .authority-stats {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      margin-bottom: 24px;
+      padding: 18px 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .authority-stat {
+      min-width: 0;
+      padding: 0 10px;
+      text-align: center;
+    }
+
+    .authority-stat + .authority-stat {
+      border-left: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .authority-stat strong {
+      display: block;
+      color: #ffffff;
+      font-family: var(--font-impact);
+      font-size: clamp(1.3rem, 5.4vw, 2.2rem);
+      font-weight: 400;
+      line-height: 1;
+      white-space: nowrap;
+    }
+
+    .authority-stat span {
+      display: block;
+      margin-top: 7px;
+      color: rgba(255, 255, 255, 0.58);
+      font-size: clamp(0.58rem, 2.4vw, 0.78rem);
+      font-weight: 800;
+      line-height: 1.25;
+      text-transform: uppercase;
+    }
+
+    .founder-section {
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 16% 48%, rgba(229, 9, 20, 0.2), transparent 34%),
+        linear-gradient(180deg, rgba(5, 5, 5, 0), rgba(20, 5, 7, 0.72), rgba(5, 5, 5, 0));
+    }
+
+    .founder-grid {
+      display: grid;
+      gap: 30px;
+      align-items: center;
+    }
+
+    .founder-portrait {
+      position: relative;
+      width: 100%;
+      max-width: 520px;
+      aspect-ratio: 4 / 5;
+      margin: 0 auto;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      border-radius: var(--radius);
+      background: #090909;
+      box-shadow: 0 28px 80px rgba(0, 0, 0, 0.44);
+    }
+
+    .founder-portrait::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 64%, rgba(5, 5, 5, 0.48));
+      pointer-events: none;
+    }
+
+    .founder-portrait img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 34%;
+    }
+
+    .founder-copy h2 {
+      margin: 16px 0 8px;
+      color: #ffffff;
+      font-family: var(--font-impact);
+      font-size: clamp(2.25rem, 8vw, 4.5rem);
+      font-weight: 400;
+      line-height: 0.98;
+      text-transform: uppercase;
+    }
+
+    .founder-role {
+      margin-bottom: 18px;
+      color: var(--red-2);
+      font-family: var(--font-strong);
+      font-size: 0.84rem;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .founder-bio {
+      max-width: 660px;
+      color: var(--muted);
+      font-size: 1rem;
+      line-height: 1.75;
+    }
+
+    .founder-proof {
+      display: grid;
+      grid-template-columns: auto minmax(0, 1fr);
+      align-items: center;
+      gap: 14px;
+      margin-top: 24px;
+      padding: 16px 0 16px 16px;
+      border-left: 3px solid var(--red);
+    }
+
+    .founder-proof strong {
+      color: #ffffff;
+      font-family: var(--font-impact);
+      font-size: clamp(1.5rem, 6vw, 2.45rem);
+      font-weight: 400;
+      line-height: 1;
+      white-space: nowrap;
+    }
+
+    .founder-proof span {
+      color: rgba(255, 255, 255, 0.66);
+      font-size: 0.82rem;
+      font-weight: 800;
+      line-height: 1.35;
+      text-transform: uppercase;
+    }
+
+    .founder-services {
+      margin-top: 24px;
+      padding-top: 18px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      color: rgba(255, 255, 255, 0.58);
+      font-size: 0.84rem;
+      line-height: 1.6;
+    }
+
+    .founder-services strong {
+      color: rgba(255, 255, 255, 0.88);
     }
 
     .formats-grid,
@@ -1712,6 +1863,15 @@
         grid-template-columns: 1fr auto;
         align-items: end;
       }
+
+      .founder-grid {
+        grid-template-columns: minmax(300px, 0.82fr) minmax(0, 1.18fr);
+        gap: clamp(42px, 6vw, 82px);
+      }
+
+      .founder-portrait {
+        margin: 0;
+      }
     }
 
     @media (min-width: 1020px) {
@@ -1844,6 +2004,20 @@
             <span class="eyebrow">Clientes de peso</span>
             <h2 id="empresas-title">J&aacute; produzimos v&iacute;deos para grandes nomes</h2>
             <p>Marcas e institui&ccedil;&otilde;es reconhecidas no Brasil e no mundo confiaram no nosso trabalho.</p>
+          </div>
+          <div class="authority-stats" aria-label="N&uacute;meros da Nobre Marketing">
+            <div class="authority-stat">
+              <strong>30 mil+</strong>
+              <span>v&iacute;deos produzidos</span>
+            </div>
+            <div class="authority-stat">
+              <strong>10+ anos</strong>
+              <span>de mercado</span>
+            </div>
+            <div class="authority-stat">
+              <strong>R$ 20 mi+</strong>
+              <span>em m&iacute;dia paga</span>
+            </div>
           </div>
           <div class="logo-grid">
             <div class="logo-card logo-marinha">
@@ -2158,6 +2332,25 @@
                 <p>Arquivos finais com qualidade para redes sociais, tr&aacute;fego pago, WhatsApp e apresenta&ccedil;&otilde;es.</p>
               </div>
             </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section founder-section" id="fundador" aria-labelledby="fundador-title">
+        <div class="container founder-grid">
+          <figure class="founder-portrait reveal">
+            <img src="assets/rogerio-nobre.jpg" alt="Rog&eacute;rio Nobre, fundador da Nobre Marketing" width="850" height="1190" loading="lazy" decoding="async" />
+          </figure>
+          <div class="founder-copy reveal">
+            <span class="eyebrow">Quem est&aacute; por tr&aacute;s</span>
+            <h2 id="fundador-title">Rog&eacute;rio Nobre</h2>
+            <p class="founder-role">Fundador da Nobre Marketing</p>
+            <p class="founder-bio">H&aacute; mais de 10 anos &agrave; frente de projetos de marketing e produ&ccedil;&atilde;o audiovisual para empresas de todo o Brasil, unindo criatividade, estrat&eacute;gia e foco em resultado.</p>
+            <div class="founder-proof">
+              <strong>R$ 20 mi+</strong>
+              <span>gerenciados em m&iacute;dia paga ao longo da carreira</span>
+            </div>
+            <p class="founder-services"><strong>Solu&ccedil;&otilde;es complementares:</strong> tr&aacute;fego pago, sites, landing pages, automa&ccedil;&otilde;es e social media.</p>
           </div>
         </div>
       </section>
